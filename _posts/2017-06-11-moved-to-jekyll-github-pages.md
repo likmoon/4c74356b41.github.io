@@ -20,4 +20,6 @@ Process\Issues:
 
 And a really big issue - my blog used permalinks like this: `?p=xxxx` and Jekyll fails to use that. No ideas about how to fix this, so I worked around by searching\replacing `?p=` to `post`. Kinda works. I hope google catches up at some point. Maybe worth looking at [this](https://github.com/jekyll/jekyll-redirect-from) later.
 
+Meanwhile, if you found this in google and it redirects you to the main page instead of the post you are looking for just do a search for the post name on the main page with `Ctrl+F`.
+
 So I guess I'm happier now. Best of luck folks.
