@@ -1,6 +1,6 @@
 ---
 id: 5771
-title: Starting a VM with a Runbook and modify NSG
+title: Start a VM and modify NSG with a Runbook
 date: 2017-05-28T11:20:53+00:00
 author: rootilo
 layout: post
