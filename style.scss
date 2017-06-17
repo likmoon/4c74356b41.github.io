@@ -35,14 +35,13 @@ table {
   line-height: 40px;
   border-collapse: separate;
   border-spacing: 0;
-  border: 2px solid #ed1c40;
-  width: 500px;
-  margin: 50px auto;
+  border: 2px solid azure;
+  margin: 10px auto;
   border-radius: .25rem;
 }
 
 thead tr:first-child {
-  background: #ed1c40;
+  background: azure;
   color: #fff;
   border: none;
 }
