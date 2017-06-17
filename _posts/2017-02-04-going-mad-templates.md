@@ -172,9 +172,9 @@ This tool can be used to capture existing calls from the portal to convert them 
 I've heard several times that you cannot use reference to other resource in the template outside of the output section. This is false. You can do that (but you also need to pass in "api-version" to the reference function). <del>The only requirement is that the resource should be deployed after the resource it is referencing, which is quite logical.</del>  
 [Reference function](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource?toc=%2fazure%2ftemplates%2ftoc.json&bc=%2Fazure%2Ftemplates%2Fbreadcrumb%2Ftoc.json#reference) implies dependancy, so no need to declare `dependsOn` if you use `reference`.
 
-```
-By using the reference function, you implicitly declare that one resource depends on another resource if the referenced resource is provisioned within same template. You do not need to also use the dependsOn property. The function is not evaluated until the referenced resource has completed deployment.
-```
+
+> By using the reference function, you implicitly declare that one resource depends on another resource if the referenced resource is provisioned within same template. You do not need to also use the dependsOn property. The function is not evaluated until the referenced resource has completed deployment.
+
 
 *to be continued...*
 
