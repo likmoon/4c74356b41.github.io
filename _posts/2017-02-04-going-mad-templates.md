@@ -31,7 +31,7 @@ There are 3 main sources of ARM Templates:
 
 Once you've found something that looks like what you need (or almost looks like that) you can start working on it. If not, try other ways of making your life easier:
 
-  1. ["Automation Script"; button on the Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template#export-the-template-from-resource-group)
+  1. ["Automation Script" button on the Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template#export-the-template-from-resource-group)
   2. [Look through already deployed templates and export them](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template#view-a-template-from-deployment-history)
   3. [Azure Explorer](https://resources.azure.com)
   4. Azure Automation option
@@ -40,13 +40,13 @@ All of these are doing exactly the same, they are giving you a way to export ex
 
 But bear in mind, all of these ways are nowhere near perfect, they cannot export certain things\properties\parameters, so after you've exported a template, read through it (or try deploying) and figure out if something is missing from the template.
 
-Working with Azure Explorer is pretty intuitive, so I won't explain it. It could help you out if you are looking for some specific property that didn't get exported with "Automation Script";, also looking at already deployed templates could work when "Automation Script"; doesn't.
+Working with Azure Explorer is pretty intuitive, so I won't explain it. It could help you out if you are looking for some specific property that didn't get exported with "Automation Script", also looking at already deployed templates could work when "Automation Script" doesn't.
 
-Azure automation option can be used when you are creating resource in Azure using the portal, when you are about to deploy it, you can notice "Automation option"; button near the deploy button.
+Azure automation option can be used when you are creating resource in Azure using the portal, when you are about to deploy it, you can notice "Automation option" button near the deploy button.
 
 [<img class="alignnone size-medium wp-image-5726" src="http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-2-101x300.png" alt="Azure Automation Options" width="101" height="300" srcset="http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-2-101x300.png 101w, http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-2.png 311w" sizes="(max-width: 101px) 100vw, 101px" />](http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-2.png)
 
-The thing with "Automation option"; most of the time it uses a slightly different template to deploy stuff, which can help you.
+The thing with "Automation option" most of the time it uses a slightly different template to deploy stuff, which can help you.
 
 ### How do I fix missing properties?
 
@@ -70,7 +70,7 @@ What is convenient with Visual Studio it allows to navigate between resources in
 More information on both: [VS Code](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-vs-code) and [Visual Studio](https://docs.microsoft.com/en-us/azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy).
 
 **This section is left only for historical purposes**  
-Sometimes, intellisense doesn't help, and to fix that you could consult the schema. Say you want to know, what parameters are there for VM OSProfile, you go to the "[schema master](https://github.com/Azure/azure-resource-manager-schemas/blob/0a7a9768de80ba5e57583f503debd160f4bccfbc/schemas/2015-01-01/deploymentTemplate.json)"; and search for the entity you are interested in. Since we want a Virtual Machine property we will look for virtual machine schema under "resources"; and there we will find reference schema ("http://schema.management.azure.com/schemas/2015-08-01/Microsoft.Compute.json#/resourceDefinitions/virtualMachines";). You download that schema and look through it to find relevant information, this time its OSProfile (this is where Alt+Shift+F hotkey comes in handy, as those definitions are minimized, so not readable):
+Sometimes, intellisense doesn't help, and to fix that you could consult the schema. Say you want to know, what parameters are there for VM OSProfile, you go to the "[schema master](https://github.com/Azure/azure-resource-manager-schemas/blob/0a7a9768de80ba5e57583f503debd160f4bccfbc/schemas/2015-01-01/deploymentTemplate.json)" and search for the entity you are interested in. Since we want a Virtual Machine property we will look for virtual machine schema under "resources" and there we will find reference schema ("http://schema.management.azure.com/schemas/2015-08-01/Microsoft.Compute.json#/resourceDefinitions/virtualMachines"). You download that schema and look through it to find relevant information, this time its OSProfile (this is where Alt+Shift+F hotkey comes in handy, as those definitions are minimized, so not readable):
 
 ```
 "osProfile": {
@@ -120,7 +120,7 @@ As you can see, this is an example of a [Key Vault resource Schema](https://docs
 
 [<img class="alignnone size-medium wp-image-5758" src="http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-4-300x94.png" alt="__" width="300" height="94" srcset="http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-4-300x94.png 300w, http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-4-768x239.png 768w, http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-4.png 927w" sizes="(max-width: 300px) 100vw, 300px" />](http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-4.png)
 
-Let's take that one step further, We know that "anything"; is possible using Azure REST API. But what if we want to create a secret that is disabled (not that there is a reason for that, but we are just using that as an **example**) or not usable after certain date. Looking at the [REST Api reference](https://docs.microsoft.com/en-us/rest/api/keyvault/setsecret) for creating a Key Vault secret we can notice that there are properties to do that.
+Let's take that one step further, We know that "anything" is possible using Azure REST API. But what if we want to create a secret that is disabled (not that there is a reason for that, but we are just using that as an **example**) or not usable after certain date. Looking at the [REST Api reference](https://docs.microsoft.com/en-us/rest/api/keyvault/setsecret) for creating a Key Vault secret we can notice that there are properties to do that.
 
 [<img class="alignnone size-medium wp-image-5759" src="http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-5-211x300.png" alt="Template Documentation example 3" width="211" height="300" srcset="http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-5-211x300.png 211w, http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-5.png 479w" sizes="(max-width: 211px) 100vw, 211px" />](http://4c74356b41.com/wp-content/uploads/2017/02/unnamed-file-5.png)
 
@@ -138,7 +138,7 @@ In other words, it worked. Well, that gives us an idea on how to extend ARM Temp
 
 <img src="http://4c74356b41.com/wp-content/uploads/2017/06/armtemplateworkflow.png" />
 
-I recommend using this "workflow"; when working with ARM Templates:
+I recommend using this "workflow" when working with ARM Templates:
 
   1. Look for existing examples on the web
   2. Export existing resources to create a base template (if you cant find an example, or if you are missing a lot of properties)
@@ -150,7 +150,7 @@ I recommend using this "workflow"; when working with ARM Templates:
 
   1. [Always check for known errors](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-common-deployment-errors)
   2. [Enable debug mode](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-common-deployment-errors#troubleshooting-tricks-and-tips)
-  3. Sometimes ARM engine will throw something like: "Error at line 1, column 2356";, easiest way to handle such an error - [minify your JSON](http://www.httputility.net/json-minifier.aspx) and look for character 2356 in the result.
+  3. Sometimes ARM engine will throw something like: "Error at line 1, column 2356", easiest way to handle such an error - [minify your JSON](http://www.httputility.net/json-minifier.aspx) and look for character 2356 in the result.
   4. Use official [MS guidance](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-common-deployment-errors#troubleshooting-other-services) to troubleshoot ARM deployments
 
 ### Hints:
@@ -169,7 +169,7 @@ This tool can be used to capture existing calls from the portal to convert them 
 
 ### Minor:
 
-I've heard several times that you cannot use reference to other resource in the template outside of the output section. This is false. You can do that. <del>The only requirement is that the resource should be deployed after the resource it is referencing, which is quite logical.</del>  
+I've heard several times that you cannot use reference to other resource in the template outside of the output section. This is false. You can do that (but you also need to pass in "api-version" to the reference function). <del>The only requirement is that the resource should be deployed after the resource it is referencing, which is quite logical.</del>  
 [Reference function](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource?toc=%2fazure%2ftemplates%2ftoc.json&bc=%2Fazure%2Ftemplates%2Fbreadcrumb%2Ftoc.json#reference) implies dependancy, so no need to declare `dependsOn` if you use `reference`.
 
 ```
