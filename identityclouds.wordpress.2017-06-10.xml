@@ -30153,7 +30153,7 @@ Add-SCStorageProvider -Name "HP P2000" -RunAsAccount $runasaccount -TCPPort 5989
 		<dc:creator><![CDATA[4c74356b41]]></dc:creator>
 		<guid isPermaLink="false">http://4c74356b41.com/?p=4631</guid>
 		<description></description>
-		<content:encoded><![CDATA[Собственно, тоже самое что и <a href="http://4c74356b41.com/2015/12/28/%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-p2000-%d0%ba-scvmm-2012-r2/">HP P2000</a>.
+		<content:encoded><![CDATA[Собственно, тоже самое что и <a href="http://4c74356b41.com/post4491">HP P2000</a>.
 
 С той лишь разницей что нужно поставить патч <a href="https://www.microsoft.com/en-us/download/details.aspx?id=42883">KB2898850</a>. Без него не работает =)]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
