@@ -1,6 +1,6 @@
 ---
 id: 1369
-title: 'Дупликация MAC адреса на хосте VMM. Event 16945 источник - MsLbfoSys'
+title: 'Дупликация MAC адреса на хосте VMM; Event 16945 источник - MsLbfoSys'
 date: 2014-07-14T13:47:35+00:00
 author: rootilo
 layout: post

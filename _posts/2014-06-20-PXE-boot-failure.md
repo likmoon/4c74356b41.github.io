@@ -1,6 +1,6 @@
 ---
 id: 618
-title: 'PXE Boot зависает после получения IP адреса от DHCP, &#8220;MTFTP&#8230;.&#8221;'
+title: 'PXE Boot зависает после получения IP адреса от DHCP'
 date: 2014-06-20T14:59:43+00:00
 author: rootilo
 layout: post

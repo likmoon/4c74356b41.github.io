@@ -1,6 +1,6 @@
 ---
 id: 1139
-title: Настройка SCSM, SCOM, VMM и Orchestrator. Self Service виртуальных машин
+title: Настройка SCSM, SCOM, VMM и Orchestrator; Self Service виртуальных машин
 date: 2014-07-06T22:22:55+00:00
 author: rootilo
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 1062
-title: Self Service виртуальных машин. Создание сервиса с портала SCSM
+title: Self Service виртуальных машин; Создание сервиса с портала SCSM
 date: 2014-07-03T16:43:52+00:00
 author: rootilo
 layout: post
