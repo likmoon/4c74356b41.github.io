@@ -31,6 +31,7 @@ body {
 }
 
 table {
+  position: relative;
   text-align: left;
   line-height: 40px;
   border-collapse: separate;
@@ -42,7 +43,7 @@ table {
 
 thead tr:first-child {
   background: azure;
-  color: #fff;
+  color: $darkGray;
   border: none;
 }
 
