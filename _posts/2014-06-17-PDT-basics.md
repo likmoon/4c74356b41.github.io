@@ -1,6 +1,6 @@
 ---
 id: 485
-title: 'Powershell Deployment Toolkit - утилита для автоматизации разворачиваний'
+title: 'Powershell Deployment Toolkit - автоматизация разворачиваний'
 date: 2014-06-17T21:37:18+00:00
 author: rootilo
 layout: post

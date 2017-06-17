@@ -1,6 +1,6 @@
 ---
 id: 5771
-title: Starting a VM with a Runbook and setting NSG RDP allow rule to your external IP address
+title: Starting a VM with a Runbook and modify NSG
 date: 2017-05-28T11:20:53+00:00
 author: rootilo
 layout: post

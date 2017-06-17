@@ -1,6 +1,6 @@
 ---
 id: 580
-title: Парсим Workflow.xml 2.64.2611
+title: 'PDT Парсим Workflow.xml 2.64.2611'
 date: 2014-06-20T03:07:53+00:00
 author: rootilo
 layout: post

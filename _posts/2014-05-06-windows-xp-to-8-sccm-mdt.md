@@ -1,6 +1,6 @@
 ---
 id: 379
-title: Миграция с Windows XP на 8.1 с использованием SCCM 2012 R2 и MDT 2013.
+title: Миграция с Windows XP на 8.1 с использованием SCCM 2012 R2 и MDT 2013
 date: 2014-05-06T15:51:19+00:00
 author: rootilo
 layout: post

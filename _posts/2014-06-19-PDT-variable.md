@@ -1,6 +1,6 @@
 ---
 id: 546
-title: '&#8220;Сердце&#8221; Powershell Deployment Toolkit - Variable.xml (часть 1)'
+title: '&#8220;Сердце&#8221; PDT - Variable.xml (часть 1)'
 date: 2014-06-19T23:45:07+00:00
 author: rootilo
 layout: post

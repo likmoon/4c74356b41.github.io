@@ -1,6 +1,6 @@
 ---
 id: 428
-title: Установка FIM 2010 R2 SP1 с использованием VMM Service Templates.
+title: FIM 2010 R2 SP1 с использованием VMM Service Templates
 date: 2014-06-11T14:06:54+00:00
 author: rootilo
 layout: post

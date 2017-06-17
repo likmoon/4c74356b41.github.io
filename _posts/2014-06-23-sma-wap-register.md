@@ -1,6 +1,6 @@
 ---
 id: 678
-title: Регистрация Service Management Automation в Windows Azure Pack
+title: Регистрация SMA в Windows Azure Pack
 date: 2014-06-23T17:13:27+00:00
 author: rootilo
 layout: post

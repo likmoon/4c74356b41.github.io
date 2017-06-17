@@ -1,6 +1,6 @@
 ---
 id: 628
-title: 'Powershell Deployment Toolkit - опыт и troubleshooting'
+title: 'PDT - опыт и troubleshooting'
 date: 2014-06-22T21:33:33+00:00
 author: rootilo
 layout: post

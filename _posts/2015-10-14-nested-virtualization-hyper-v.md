@@ -12,11 +12,8 @@ tags:
   - Copypaste
   - Hyper-V
 ---
-http://blogs.technet.com/b/virtualization/archive/2015/10/13/windows-insider-preview-nested-virtualization.aspx
 
-Пока еще с &#8220;конскими&#8221; ограничениями, но что же делать 😉 
-
-Like I said earlier – this is still just a “preview” of this feature. Obviously, this feature should not be used in production environments.  Below is a list of known issues:
+Like I said earlier – this is still just a [“preview” of this feature](http://blogs.technet.com/b/virtualization/archive/2015/10/13/windows-insider-preview-nested-virtualization.aspx). Obviously, this feature should not be used in production environments.  Below is a list of known issues:
 
   * **Both hypervisors need to be the latest versions of Hyper-V. Other hypervisors will not work. Windows Server 2012R2, or even builds prior to 10565 will not work.**
   * Once nested virtualization is enabled in a VM, the following features are no longer compatible with that VM. These actions will either fail, or cause the VM not to start: 

@@ -1,6 +1,6 @@
 ---
 id: 804
-title: Запуск полного Hardware Inventory на клиенте SCCM (2007 или 2012)
+title: Запуск Hardware Inventory на клиенте SCCM
 date: 2014-06-26T11:13:08+00:00
 author: rootilo
 layout: post

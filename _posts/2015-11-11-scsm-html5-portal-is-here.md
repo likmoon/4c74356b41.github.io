@@ -12,8 +12,7 @@ tags:
   - Copypaste
   - Service Manager
 ---
-http://blogs.technet.com/b/servicemanager/archive/2015/11/06/announcing-new-html5-based-self-service-portal.aspx
 
-По ссылке документ как ставить портал и ссылка на сам портал.
+[По ссылке](http://blogs.technet.com/b/servicemanager/archive/2015/11/06/announcing-new-html5-based-self-service-portal.aspx) документ как ставить портал и ссылка на сам портал.
   
 пс. Советую запускать инсталлер от имени администратора >.<

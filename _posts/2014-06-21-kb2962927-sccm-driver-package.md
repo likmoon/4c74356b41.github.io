@@ -1,6 +1,6 @@
 ---
 id: 623
-title: 'KB2962927 SCCM: Невозможно распространить driver package на pull DP.'
+title: 'KB2962927 SCCM: Невозможно распространить driver package на pull DP'
 date: 2014-06-21T15:32:24+00:00
 author: rootilo
 layout: post

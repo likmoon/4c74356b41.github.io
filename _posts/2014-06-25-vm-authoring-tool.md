@@ -1,6 +1,6 @@
 ---
 id: 767
-title: 'VM Authoring Tool - Создаем новую роль виртуальной машины'
+title: 'VM Authoring Tool - Новая роль виртуальной машины'
 date: 2014-06-25T16:25:49+00:00
 author: rootilo
 layout: post

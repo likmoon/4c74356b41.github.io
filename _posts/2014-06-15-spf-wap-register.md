@@ -1,6 +1,6 @@
 ---
 id: 466
-title: Регистрация Service Provider Foundation в Windows Azure Pack
+title: Регистрация SPF в Windows Azure Pack
 date: 2014-06-15T17:58:13+00:00
 author: rootilo
 layout: post

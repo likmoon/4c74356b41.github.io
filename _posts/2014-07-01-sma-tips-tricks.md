@@ -1,6 +1,6 @@
 ---
 id: 930
-title: 'Service Management Automation - более пристальный взгляд.'
+title: 'SMA - более пристальный взгляд'
 date: 2014-07-01T17:23:02+00:00
 author: rootilo
 layout: post

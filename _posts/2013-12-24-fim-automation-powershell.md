@@ -1,6 +1,6 @@
 ---
 id: 281
-title: Установка FIMAutomation Powershell на сервер без оной.
+title: Установка FIMAutomation Powershell на сервер без оной
 date: 2013-12-24T14:02:41+00:00
 author: rootilo
 layout: post
