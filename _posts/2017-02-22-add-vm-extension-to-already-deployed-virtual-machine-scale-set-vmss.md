@@ -1,6 +1,6 @@
 ---
 id: 5714
-title: Add vm extension to VMSS (Virtual Machine Scale Set)
+title: Add VM extension to VMSS (Virtual Machine Scale Set)
 date: 2017-02-22T12:38:04+00:00
 author: rootilo
 layout: post
