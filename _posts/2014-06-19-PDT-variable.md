@@ -1,6 +1,6 @@
 ---
 id: 546
-title: '"Сердце"; PDT - Variable.xml (часть 1)'
+title: '"Сердце" PDT - Variable.xml (часть 1)'
 date: 2014-06-19T23:45:07+00:00
 author: rootilo
 layout: post

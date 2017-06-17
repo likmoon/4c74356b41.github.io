@@ -18,9 +18,9 @@ tags:
   
 Activity Library (FimExtensions.FimActivityLibrary.dll)
   
-Installation Script (InstallFimPowerShellWF.ps1 - данный скрипт сохраняет dll файл скачанный нами в GAC Assembly, добавляет ActivityInformationConfiguration в Fim Service, создает источник EventLog "PowerShellActivity";)
+Installation Script (InstallFimPowerShellWF.ps1 - данный скрипт сохраняет dll файл скачанный нами в GAC Assembly, добавляет ActivityInformationConfiguration в Fim Service, создает источник EventLog "PowerShellActivity")
   
-Example Scripts (Create-FimServiceAccountAsFimPerson.ps1 - данный скрипт находит Fim Service, находит пользователя, от имени которого запускается сервис, получает ObjectSID данного пользователя из Active Directory, создает данного пользователя на портале FIM и добавляет его в Set "Administrators";; Update-FimServiceConfigFile.ps1 - исправляет конфигурацию resourceManagementServiceBaseAddress и добавляет записи System.Diagnostics для Fim PowerShell WorkFlow)
+Example Scripts (Create-FimServiceAccountAsFimPerson.ps1 - данный скрипт находит Fim Service, находит пользователя, от имени которого запускается сервис, получает ObjectSID данного пользователя из Active Directory, создает данного пользователя на портале FIM и добавляет его в Set "Administrators" Update-FimServiceConfigFile.ps1 - исправляет конфигурацию resourceManagementServiceBaseAddress и добавляет записи System.Diagnostics для Fim PowerShell WorkFlow)
 
 [FIM Powershell Module (v2.1)](http://fimpowershellmodule.codeplex.com/)
   
@@ -48,8 +48,8 @@ Import-Module .FimPowerShellModule.psm1
 
 Как проверить: создаем Set, Action WorkFlow и MPR для проверки; в Action Workflow создаем Powershell WorkFlow Activity приблизительно следующего содержания:
 
-$test = "It works!";
+$test = "It works!"
   
 $test | Out-File С:путь\_к\_файлу
 
-Добавляем пользователя в Set и наблюдаем "It works!"; в только что созданном файле.
+Добавляем пользователя в Set и наблюдаем "It works!" в только что созданном файле.

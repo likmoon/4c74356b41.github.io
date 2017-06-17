@@ -71,7 +71,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-01.png" rel="attachment wp-att-5270"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-01-281x300.png" alt="post-install-01" width="281" height="300" /></a>
   
-Теперь осталось только создать коннектор VMM - SCOM. Для этого из консоли VMM необходимо зайти в пункт Settings, выбрать Operations Manager и нажав правую кнопку мыши выбрать пункт "Properties";.
+Теперь осталось только создать коннектор VMM - SCOM. Для этого из консоли VMM необходимо зайти в пункт Settings, выбрать Operations Manager и нажав правую кнопку мыши выбрать пункт "Properties".
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-02.png" rel="attachment wp-att-5274"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-02-300x257.png" alt="post-install-02" width="300" height="257" /></a>
   
@@ -83,7 +83,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-03.png" rel="attachment wp-att-5278"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-03-300x211.png" alt="post-install-03" width="300" height="211" /></a>
   
-Выберите "Virtual Machine Manager connector"; укажите FQDN и учетные данные для подключения к VMM.
+Выберите "Virtual Machine Manager connector" укажите FQDN и учетные данные для подключения к VMM.
 
 **Связывание Service Manager и Operations Manager**
   
@@ -93,7 +93,7 @@ tags:
   
 Вам необходимо импортировать все management pack'и, которые установил VMM в SCOM и зависимости. Зависимости Вы должны были скачать перед установкой коннектора VMM - SCOM, а management pack'и, которые VMM установил в SCOM находятся в папке VMM (c:Program FilesMicrosoft System Center 2012 R2Virtual Machine ManagerManagementPacks). И только после этого создавать коннектор (Operations Manager Configuration Items).
   
-Укажите FQDN и учетные данные для подключения к SCOM, в разделе "Management Packs"; укажите все Management Pack'и. Если у Вас не совпадают версии management pack'ов, Вам необходимо будет обновить их в SCSM или в SCOM, чтобы версии соответствовали.
+Укажите FQDN и учетные данные для подключения к SCOM, в разделе "Management Packs" укажите все Management Pack'и. Если у Вас не совпадают версии management pack'ов, Вам необходимо будет обновить их в SCSM или в SCOM, чтобы версии соответствовали.
 
 **Связывание Service Manager и Orchestrator**
   
@@ -103,15 +103,15 @@ tags:
 
 **Создание коннекторов VMM и SCSM в Orchestrator**
   
-Откройте "Runbook Designer"; на сервере Orchestrator
+Откройте "Runbook Designer" на сервере Orchestrator
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-10.png" rel="attachment wp-att-5302"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-10-300x193.png" alt="post-install-10" width="300" height="193" /></a>
   
-Далее в появившемся окне создайте новый коннектор, дайте ему имя, введите учетные данные и FQDN для подключения. Для VMM операция аналогична, но есть нюанс, в поле адрес консоли укажите FQDN сервера VMM, а в поле сервер VMM значение "localhost";.
+Далее в появившемся окне создайте новый коннектор, дайте ему имя, введите учетные данные и FQDN для подключения. Для VMM операция аналогична, но есть нюанс, в поле адрес консоли укажите FQDN сервера VMM, а в поле сервер VMM значение "localhost".
 
 **Настройка Chargeback**
   
-Для того чтобы в SCSM появилась функция "Chargeback"; Вам необходимо импортировать соответствующиq Management Pack Bundle, которыq расположен в папке c:Program FilesMicrosoft System Center 2012 R2Service ManagerChargeback и называется Chargeback.mpb.
+Для того чтобы в SCSM появилась функция "Chargeback" Вам необходимо импортировать соответствующиq Management Pack Bundle, которыq расположен в папке c:Program FilesMicrosoft System Center 2012 R2Service ManagerChargeback и называется Chargeback.mpb.
   
 После того как импорт закончен Вам необходимо будет дождаться синхронизации с Data Warehouse.
   
@@ -129,7 +129,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-07.png" rel="attachment wp-att-5290"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-07-297x300.png" alt="post-install-07" width="297" height="300" /></a>
   
-Классы виртуальных машин, дисков, адаптеров и так далее. Для этого просто создайте необходимый "Вид"; и просмотрите его.
+Классы виртуальных машин, дисков, адаптеров и так далее. Для этого просто создайте необходимый "Вид" и просмотрите его.
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-08.png" rel="attachment wp-att-5294"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/post-install-08-161x300.png" alt="post-install-08" width="161" height="300" /></a>
   

@@ -22,9 +22,9 @@ After that you would create a Logic App in Azure with the [following definition]
 
 Right now this bot works the following way:
 
-You send anything to it (to the bot in telegram) it responds with an inline keyboard and then you press either "MrLlamaSC"; or Placeholder. That sends a response to the Function App.
+You send anything to it (to the bot in telegram) it responds with an inline keyboard and then you press either "MrLlamaSC" or Placeholder. That sends a response to the Function App.
 
-When you push the "MrLlamaSC"; button it would send a response, that would get processed by the Azure Functions that would send a request to a Logic App that would send a request back to Azure Function which would send the tweet back to the Bot.
+When you push the "MrLlamaSC" button it would send a response, that would get processed by the Azure Functions that would send a request to a Logic App that would send a request back to Azure Function which would send the tweet back to the Bot.
 
 If you go through the code you would easily understand how the function works. I've decided against using the [SDK](https://github.com/MrRoundRobin/telegram.bot) just to illustrate that its possible to do with plain HTTP requests and a bit of Logic Apps magic. I will do a post on Logic Apps a bit down the road.
 

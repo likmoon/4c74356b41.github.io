@@ -45,17 +45,17 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-01.png" rel="attachment wp-att-5101"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-01-300x77.png" alt="import-runbook-01" width="300" height="77" /></a>
   
-Дайте шаблону название, выберите management pack или создайте новый (рекомендуется). Нажмите "OK"; и закройте открывшееся после этого окно.
+Дайте шаблону название, выберите management pack или создайте новый (рекомендуется). Нажмите "OK" и закройте открывшееся после этого окно.
 
 Теперь нужно подготовить шаблон собственно Service Offering. В закладке Library откройте пункт Templates и создайте новый шаблон
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-02.png" rel="attachment wp-att-5105"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-02-300x93.png" alt="import-runbook-02" width="300" height="93" /></a>
   
-Дайте ему название, выберите класс "Service Request";
+Дайте ему название, выберите класс "Service Request"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-03.png" rel="attachment wp-att-5108"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-03-300x278.png" alt="import-runbook-03" width="300" height="278" /></a>
   
-После этого, в новом окне заполните поля: название, приоритет , срочность - обязательно, а остальные - желательно. Перейдите в закладку "Activities"; и нажмите плюсик справа сверху
+После этого, в новом окне заполните поля: название, приоритет , срочность - обязательно, а остальные - желательно. Перейдите в закладку "Activities" и нажмите плюсик справа сверху
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-04.png" rel="attachment wp-att-5111"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-04-300x244.png" alt="import-runbook-04" width="300" height="244" /></a>
   

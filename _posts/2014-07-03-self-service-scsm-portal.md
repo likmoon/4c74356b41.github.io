@@ -51,7 +51,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_st_01.png" rel="attachment wp-att-5234"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_st_01-300x205.png" alt="pc_st_01" width="300" height="205" /></a>
   
-Переменные Custom1, Custom2 и Custom3 запасные. Я всегда рекомендую создавать запасные переменные, дело в том что если Вы добавляете переменную после того как Вы создали шаблон runbook'а он будет помечен как "failed"; или что-то в таком духе, и Вам придется пересоздавать шаблон и request offering.
+Переменные Custom1, Custom2 и Custom3 запасные. Я всегда рекомендую создавать запасные переменные, дело в том что если Вы добавляете переменную после того как Вы создали шаблон runbook'а он будет помечен как "failed" или что-то в таком духе, и Вам придется пересоздавать шаблон и request offering.
 
 **2. Get SR**
   
@@ -63,7 +63,7 @@ Connector: SCSM Connector
   
 Class: Service Request
   
-Filter: "SC Object GUID"; equals {SR GUID from "Initialize Data";}
+Filter: "SC Object GUID" equals {SR GUID from "Initialize Data"}
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_st_03.png" rel="attachment wp-att-5237"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_st_03-300x182.png" alt="pc_st_03" width="300" height="182" /></a>
   
@@ -77,7 +77,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Service Template
 
@@ -89,7 +89,7 @@ Connector: SCSM Connector
   
 Class: Service Templates
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship SR to Service";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship SR to Service"}
 
 **5. Get Relationship - Affected User**
   
@@ -99,7 +99,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Active Directory User
 
@@ -111,7 +111,7 @@ Connector: SCSM Connector
   
 Class: Service Templates
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship - Affected User";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship - Affected User"}
 
 **7. Get Relationship SR to Cloud**
   
@@ -121,7 +121,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Private Cloud
 
@@ -133,9 +133,9 @@ Connector: SCSM Connector
   
 Class: Private Cloud
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship SR to Cloud";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship SR to Cloud"}
 
-Теперь я поясню что тут происходит. Второй шаг берет SR GUID, который SCSM передает в Runbook, и запрашивает Service Request из SCSM. После этого шаги 3, 5 и 7 запрашивают связанные с Service Request объекты, а шаги 4, 6 и 8 "получают"; эти объекты.
+Теперь я поясню что тут происходит. Второй шаг берет SR GUID, который SCSM передает в Runbook, и запрашивает Service Request из SCSM. После этого шаги 3, 5 и 7 запрашивают связанные с Service Request объекты, а шаги 4, 6 и 8 "получают" эти объекты.
 
 **9. Get Service Template**
   
@@ -145,7 +145,7 @@ Action: Get Service Template
   
 Connector: VMM Connector
   
-Filter: "Service Template ID"; equals {ID Virtual Machine Manager from "Get Object - Service Template";}
+Filter: "Service Template ID" equals {ID Virtual Machine Manager from "Get Object - Service Template"}
 
 **10. Get Object - Cloud**
   
@@ -153,7 +153,7 @@ Action: Get Cloud
   
 Connector: VMM Connector
   
-Filter: "Cloud ID"; equals {ID Virtual Machine Manager from "Get Object - Cloud";}
+Filter: "Cloud ID" equals {ID Virtual Machine Manager from "Get Object - Cloud"}
 
 **11. Configure Service Deployment**
   
@@ -163,11 +163,11 @@ Connector: VMM Connector
   
 Service Configuration Name: {Service Name from "Initialize Data'}
   
-Service Template Name: {Service Template Name from "Get Service Template";}
+Service Template Name: {Service Template Name from "Get Service Template"}
   
 Deployment Target: Cloud
   
-Cloud Name: {Cloud Name from "Get Object - Cloud";}
+Cloud Name: {Cloud Name from "Get Object - Cloud"}
   
 Service Template Release: {Service Template Release from "Get Service Template}
 
@@ -202,6 +202,6 @@ Action: Deploy Service
   
 Connector: VMM Connector
   
-Service Configuration Name: {Service Name from "Initialize Data";}
+Service Configuration Name: {Service Name from "Initialize Data"}
 
 На этом все закончено, можно сохранять ранбук, импортировать его в SCSM, создавать шаблоны и заполнять заявку.

@@ -33,7 +33,7 @@ Microsoft .NET Framework 3.5 Service Pack (SP) 1;
 Internet Information Services (IIS) 8 (встроенный функционал Windows Server 2012) или IIS 8.5 (встроенный функционал Windows Server 2012 R2);  
 .NET Framework 4.5 Extended, с ASP.NET для Windows 8.  
 
-необходимое "железо";:
+необходимое "железо":
   
 40гб места на жестком диске  
 8гб оперативной памяти (не используйте динамическую память)  
@@ -41,7 +41,7 @@ Internet Information Services (IIS) 8 (встроенный функционал
 
 1. Скачайте и запустите [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx);
   
-2. Запустите его и выберите "Windows Azure Pack: Portal and API Express"; компонент, согласитесь с условиями лицензии, согласитесь скачивать обновления с Windows Update (во время установки нужен доступ к интернету так как Web Platform Installer качает все файлы установщика с сайта Microsoft);
+2. Запустите его и выберите "Windows Azure Pack: Portal and API Express" компонент, согласитесь с условиями лицензии, согласитесь скачивать обновления с Windows Update (во время установки нужен доступ к интернету так как Web Platform Installer качает все файлы установщика с сайта Microsoft);
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/wap_express_00.png" rel="attachment wp-att-4983"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/wap_express_00-300x204.png" alt="wap_express_00" width="300" height="204" /></a>
   

@@ -1,6 +1,6 @@
 ---
 id: 857
-title: 'Ошибка при первом логине "The universal unique identifier (UUID) type is not supported";'
+title: 'Ошибка при первом логине "The universal unique identifier (UUID) type is not supported"'
 date: 2014-06-26T23:28:17+00:00
 author: rootilo
 layout: post
@@ -22,6 +22,6 @@ tags:
 
 **Workaround 2**
   
-Выполните следующую команду из Task Sequence'а. cmd /c reg add "HKLMSYSTEMCurrentControlSetServicesgpsvc"; /v Type /t REG_DWORD /d 0x10 /f
+Выполните следующую команду из Task Sequence'а. cmd /c reg add "HKLMSYSTEMCurrentControlSetServicesgpsvc" /v Type /t REG_DWORD /d 0x10 /f
 
 Подробнее [KB2976660](http://support.microsoft.com/kb/2976660/en-us)

@@ -20,7 +20,7 @@ tags:
 
 Для проверки выполните на хосте где расположена виртуальная машина команду:
   
-Get-WmiObject -Class win32_product -Filter &#8216;Name = "Microsoft System Center Virtual Machine Manager DHCP Server (x64)";&#8216;
+Get-WmiObject -Class win32_product -Filter &#8216;Name = "Microsoft System Center Virtual Machine Manager DHCP Server (x64)"&#8216;
   
 Данное поведение наблюдается если версия ниже чем 3.2.7649.0.
 

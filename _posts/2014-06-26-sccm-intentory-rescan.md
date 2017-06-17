@@ -21,21 +21,21 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_02.png" rel="attachment wp-att-4835"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_02-289x300.png" alt="sccm_hw_full_02" width="289" height="300" /></a>
 
-3. Введите "rootccminvagt"; в поле "Namespace";;
+3. Введите "rootccminvagt" в поле "Namespace"
   
-4. Нажмите "Enum Classes";;
+4. Нажмите "Enum Classes"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_03.png" rel="attachment wp-att-4839"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_03-300x233.png" alt="sccm_hw_full_03" width="300" height="233" /></a>
 
-5. Выберите "Recursive"; и нажмите "OK";
+5. Выберите "Recursive" и нажмите "OK"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_04.png" rel="attachment wp-att-4842"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_04-300x134.png" alt="sccm_hw_full_04" width="300" height="134" /></a>
 
-6. Найдите "InventoryActionStatus"; и дважды кликните по нему мышкой;
+6. Найдите "InventoryActionStatus" и дважды кликните по нему мышкой;
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_00.png" rel="attachment wp-att-4829"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_00-300x182.png" alt="sccm_hw_full_00" width="300" height="182" /></a>
 
-7. Выберите "Instances";;
+7. Выберите "Instances"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_05.png" rel="attachment wp-att-4845"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_05-300x258.png" alt="sccm_hw_full_05" width="300" height="258" /></a>
 

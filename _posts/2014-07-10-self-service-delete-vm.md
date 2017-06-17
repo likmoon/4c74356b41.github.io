@@ -45,7 +45,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc-del-01.png" rel="attachment wp-att-5247"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc-del-01-300x206.png" alt="pc-del-01" width="300" height="206" /></a>
   
-Обращаю внимание, если Вы хотите чтобы runbook исполнялся только после подтверждения (в моем случае, на портале создан запрос на который пользователб должен ответить "Подтверждаю";) Вам необходимо настроить "Link"; от шага "Initialize Data"; до шага "Get SR";, где переменная "Confirm"; равняется "Подтверждаю";
+Обращаю внимание, если Вы хотите чтобы runbook исполнялся только после подтверждения (в моем случае, на портале создан запрос на который пользователб должен ответить "Подтверждаю") Вам необходимо настроить "Link" от шага "Initialize Data" до шага "Get SR", где переменная "Confirm" равняется "Подтверждаю"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc-del-02.png" rel="attachment wp-att-5250"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc-del-02-300x205.png" alt="pc-del-02" width="300" height="205" /></a>
 
@@ -59,7 +59,7 @@ Connector: SCSM Connector
   
 Class: Service Request
   
-Filter: "SC Object GUID"; equals {SR GUID from "Initialize Data";}
+Filter: "SC Object GUID" equals {SR GUID from "Initialize Data"}
 
 **3. Get Relationship SR to VM**
   
@@ -69,7 +69,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Virtual Machine
 
@@ -81,7 +81,7 @@ Connector: SCSM Connector
   
 Class: Virtual Machine
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship SR to VM";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship SR to VM"}
 
 **5. Get Relationship - Affected User**
   
@@ -91,7 +91,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Active Directory User
 
@@ -103,7 +103,7 @@ Connector: SCSM Connector
   
 Class: Service Templates
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship - Affected User";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship - Affected User"}
 
 **7. Get VM**
   
@@ -113,9 +113,9 @@ Action: Get VM
   
 Connector: VMM Connector
   
-Filter: VM Name equals {Display Name from "Get Object - VM";}
+Filter: VM Name equals {Display Name from "Get Object - VM"}
   
-Filter: Owner equals domain{User Name from "Get Object - Affected User";}
+Filter: Owner equals domain{User Name from "Get Object - Affected User"}
 
 **8. Stop VM**
   
@@ -123,7 +123,7 @@ Action: Stop VM
   
 Connector: VMM Connector
   
-Filter: VM ID equals {VM ID from "Get VM";}
+Filter: VM ID equals {VM ID from "Get VM"}
 
 **9. Remove VM**
   
@@ -131,6 +131,6 @@ Action: Remove VM
   
 Connector: VMM Connector
   
-Filter: VM ID equals {VM ID from "Get VM";}
+Filter: VM ID equals {VM ID from "Get VM"}
 
 Остальные шаги опциональны.

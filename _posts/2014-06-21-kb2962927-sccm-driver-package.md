@@ -21,6 +21,6 @@ CContentDefinition::ExpandContentDefinitionItems failed; 0x8007007b
   
 CContentDefinition::Expand failed; 0x8007007b
   
-Проблема проявляется если в пути используется ""; и используется кастомное имя сетевой папки.
+Проблема проявляется если в пути используется "" и используется кастомное имя сетевой папки.
   
 В этом случае Вам вот [сюда](http://support.microsoft.com/kb/2962927).

@@ -44,9 +44,9 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc-modifyvm-01.png" rel="attachment wp-att-5258"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc-modifyvm-01-300x205.png" alt="pc-modifyvm-01" width="300" height="205" /></a>
   
-Обращаю внимание, если Вы хотите чтобы виртуальная машина перезагружалась только после подтверждения (в моем случае, на портале создан запрос на который пользователь может ответить "Да"; или "Нет";) Вам необходимо настроить "Link"; от шага "Initialize Data"; до шага "Get SR";, где переменная "Shall We Restart VM"; ровняется "Да";.
+Обращаю внимание, если Вы хотите чтобы виртуальная машина перезагружалась только после подтверждения (в моем случае, на портале создан запрос на который пользователь может ответить "Да" или "Нет") Вам необходимо настроить "Link" от шага "Initialize Data" до шага "Get SR", где переменная "Shall We Restart VM" ровняется "Да".
   
-В моем runbook'е, при выборе "Нет"; запрос передается в другой runbook, который ждет следующего окна обслуживания и только тогда перегружает виртуальную машину. Это костыль. Правильнее сделать запись с VM ID в базу данных и runbook, который будет запускаться по рассписанию и из базы данных брать данные о виртуальных машинах и изменениях, которые необходимо к ним применить.
+В моем runbook'е, при выборе "Нет" запрос передается в другой runbook, который ждет следующего окна обслуживания и только тогда перегружает виртуальную машину. Это костыль. Правильнее сделать запись с VM ID в базу данных и runbook, который будет запускаться по рассписанию и из базы данных брать данные о виртуальных машинах и изменениях, которые необходимо к ним применить.
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc-modifyvm-02.png" rel="attachment wp-att-5261"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc-modifyvm-02-300x206.png" alt="pc-modifyvm-02" width="300" height="206" /></a>
 
@@ -60,7 +60,7 @@ Connector: SCSM Connector
   
 Class: Service Request
   
-Filter: "SC Object GUID"; equals {SR GUID from "Initialize Data";}
+Filter: "SC Object GUID" equals {SR GUID from "Initialize Data"}
 
 **3. Get Relationship SR to VM**
   
@@ -70,7 +70,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Virtual Machine
 
@@ -82,7 +82,7 @@ Connector: SCSM Connector
   
 Class: Virtual Machine
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship SR to VM";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship SR to VM"}
 
 **5. Get Relationship - Affected User**
   
@@ -92,7 +92,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from "Get SR";}
+Object GUID: {SC Object GUID from "Get SR"}
   
 Related Class: Active Directory User
 
@@ -104,7 +104,7 @@ Connector: SCSM Connector
   
 Class: Service Templates
   
-Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship - Affected User";}
+Filter: "SC Object GUID" equals {Related object GUID from "Get Relationship - Affected User"}
 
 **7. Get VM**
   
@@ -114,9 +114,9 @@ Action: Get VM
   
 Connector: VMM Connector
   
-Filter: VM Name equals {Display Name from "Get Object - VM";}
+Filter: VM Name equals {Display Name from "Get Object - VM"}
   
-Filter: Owner equals domain{User Name from "Get Object - Affected User";}
+Filter: Owner equals domain{User Name from "Get Object - Affected User"}
 
 **8. Stop VM**
   
@@ -124,7 +124,7 @@ Action: Stop VM
   
 Connector: VMM Connector
   
-Filter: VM ID equals {VM ID from "Get VM";}
+Filter: VM ID equals {VM ID from "Get VM"}
 
 **9. Update VM**
   
@@ -132,13 +132,13 @@ Action: Update VM
   
 Connector: VMM Connector
   
-Filter: VM ID equals {VM ID from "Get VM";}
+Filter: VM ID equals {VM ID from "Get VM"}
   
-CPU Count: {Processor from "Initialize Data";}
+CPU Count: {Processor from "Initialize Data"}
   
-Memory(MB): {RAM from "Initialize Data";}
+Memory(MB): {RAM from "Initialize Data"}
   
-Внимание, если у виртуальной машины стоит динамическая память, а runbook изменит значение Memory на значение больше чем максимальная память VM перейдет в состояние Failed. Кажется это "By Design";, шаг Update VM не умеет работать с динамической памятью. Workaround - PowerShell.
+Внимание, если у виртуальной машины стоит динамическая память, а runbook изменит значение Memory на значение больше чем максимальная память VM перейдет в состояние Failed. Кажется это "By Design", шаг Update VM не умеет работать с динамической памятью. Workaround - PowerShell.
 
 **10. Get Disk**
   
@@ -146,7 +146,7 @@ Action: Get Disk
   
 Connector: VMM Connector
   
-Filter: VM ID equals {VM ID from "Get VM";}
+Filter: VM ID equals {VM ID from "Get VM"}
 
 **11. Update Disk**
   
@@ -154,23 +154,23 @@ Action: Update Disk
   
 Connector: VMM Connector
   
-Filter: VM ID equals {Virtual Disk Drive ID from "Get Disk";}
+Filter: VM ID equals {Virtual Disk Drive ID from "Get Disk"}
   
-Additional Size: {HDD from "Initialize Data";}
+Additional Size: {HDD from "Initialize Data"}
 
 По аналогии Вы можете создать и шаги для изменения свойств адаптера.
   
-Данные шаги не последовательны по причине того, что если шаг "Get Disk"; или "Get Network Adapter"; вернет 2 значения (или более), все следующие шаги будут повторятся несколько раз (по числу возвращенных объектов).
+Данные шаги не последовательны по причине того, что если шаг "Get Disk" или "Get Network Adapter" вернет 2 значения (или более), все следующие шаги будут повторятся несколько раз (по числу возвращенных объектов).
 
-После этого можно передавать VM ID в Runbook "Launch VM";. Шаг "Launch VM"; соответствует уже настроенному шагу "Launch VM"; ([тут](http://4c74356b41.com/post1227)).
+После этого можно передавать VM ID в Runbook "Launch VM". Шаг "Launch VM" соответствует уже настроенному шагу "Launch VM" ([тут](http://4c74356b41.com/post1227)).
 
-**Модификация Runbook'а "Launch VM";**
+**Модификация Runbook'а "Launch VM"**
   
 Если Вы не читали мы уже [создали](http://4c74356b41.com/post1227) этот runbook. Пришло время добавить в него шаги для сценария изменения VM.
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/module-runbooks-00.png" rel="attachment wp-att-5129"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/module-runbooks-00-300x175.png" alt="module-runbooks-00" width="300" height="175" /></a>
   
-Содайте линк к событию "Delay 120";, а в линке задайте условие Reserved from Initialize Data does not equals "NewVM";
+Содайте линк к событию "Delay 120", а в линке задайте условие Reserved from Initialize Data does not equals "NewVM"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc-modifyvm-03.png" rel="attachment wp-att-5264"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc-modifyvm-03-300x187.png" alt="pc-modifyvm-03" width="300" height="187" /></a>
 
@@ -190,4 +190,4 @@ Action: Start VM
   
 Connector: VMM Connector
   
-Filter: {VM ID from "Get VM";}
+Filter: {VM ID from "Get VM"}

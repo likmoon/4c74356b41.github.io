@@ -14,7 +14,7 @@ tags:
 ---
 В интернетах много написано про то как снести агента VMM с core сервера:
   
-Get-WMIObject -Class Win32_product или Regedit > HKLM > Software > Microsoft > Windows > CurrentVersion > Uninstall, там находим GUID MSI пакета и далее msiexec /x "{GUID}"; или wmic get product name "Имя продукта"; delete&#8230; И это все прекрасно. Когда эти записи в реестреWMI есть. А если их нет, а агент есть? 🙂
+Get-WMIObject -Class Win32_product или Regedit > HKLM > Software > Microsoft > Windows > CurrentVersion > Uninstall, там находим GUID MSI пакета и далее msiexec /x "{GUID}" или wmic get product name "Имя продукта" delete&#8230; И это все прекрасно. Когда эти записи в реестреWMI есть. А если их нет, а агент есть? 🙂
 
 CopyPaste моего [поста](https://social.technet.microsoft.com/Forums/en-US/aa122e7f-ef6c-44ee-aa23-243f65b20eb4/unable-to-remove-vmm-agent-from-hyperv-host) на social.Technet
 

@@ -17,7 +17,7 @@ tags:
   - System Center 2012 R2
   - Virtual Machine Manager
 ---
-Последняя статья из серии "Создание виртуальной машины с портала SCSM";.
+Последняя статья из серии "Создание виртуальной машины с портала SCSM".
   
 1. [Создание Runbook'а](http://4c74356b41.com/post1176); (часть 1)
   
@@ -49,7 +49,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-02.png" rel="attachment wp-att-5040"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-02-300x206.png" alt="conf-scsm-02" width="300" height="206" /></a>
   
-На втором экране необходимо создать запросы, на которые должен ответить пользователь, чтобы создать виртуальную машину. Мы запросим у пользователя имя машины, шаблон, из которого будет создана машина, и облако, в котором она будет создана. Запрос имени должен иметь тип "Text";, а два других запроса должны иметь тип "Query Results";.
+На втором экране необходимо создать запросы, на которые должен ответить пользователь, чтобы создать виртуальную машину. Мы запросим у пользователя имя машины, шаблон, из которого будет создана машина, и облако, в котором она будет создана. Запрос имени должен иметь тип "Text", а два других запроса должны иметь тип "Query Results".
   
 Вы можете так же запросить пароль администратора, к примеру, или делать ли виртуальную машину высокодоступной. Используйте фантазию!<a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-03.png" rel="attachment wp-att-5044"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-03-300x233.png" alt="conf-scsm-03" width="300" height="233" /></a>
 
@@ -57,21 +57,21 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-04.png" rel="attachment wp-att-5048"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-04-300x244.png" alt="conf-scsm-04" width="300" height="244" /></a>
   
-Запрос шаблона и облака настроить сложнее, откройте свойства запроса двойным шелчком. В открывшемся окне выберите "All Basic Classes";, найдите и укажите "Virtual Machine Template"; класс
+Запрос шаблона и облака настроить сложнее, откройте свойства запроса двойным шелчком. В открывшемся окне выберите "All Basic Classes", найдите и укажите "Virtual Machine Template" класс
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-05.png" rel="attachment wp-att-5052"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-05-300x260.png" alt="conf-scsm-05" width="300" height="260" /></a>
   
-Далее Вам нужно будет указать фильтры для шаблона, к примеру у меня на стенде, у всех шаблонов для Self Service есть пометка "usage: SSP Deployments";
+Далее Вам нужно будет указать фильтры для шаблона, к примеру у меня на стенде, у всех шаблонов для Self Service есть пометка "usage: SSP Deployments"
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-06.png" rel="attachment wp-att-5056"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-06-300x300.png" alt="conf-scsm-06" width="300" height="300" /></a>
   
-На следующем экране Вы можете настроить информацию о шаблонах, которая будет предоставлена конечному пользователю. Имя, описание, количество ЦПУ, памяти и так далее. На последнем шаге Вы должны указать что делать с полученным объектом. В данном случае его необходимо прикрепить к Service Request'у как "Related Item";.
+На следующем экране Вы можете настроить информацию о шаблонах, которая будет предоставлена конечному пользователю. Имя, описание, количество ЦПУ, памяти и так далее. На последнем шаге Вы должны указать что делать с полученным объектом. В данном случае его необходимо прикрепить к Service Request'у как "Related Item".
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-07.png" rel="attachment wp-att-5060"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-07-300x300.png" alt="conf-scsm-07" width="300" height="300" /></a>
   
-Точно такую же процедуру нужно повторить с третьим запросом. Выбираете класс "Private Cloud";, фильтры, настраиваете представление и прикрепляете к Service Request'у как "Related Item";.
+Точно такую же процедуру нужно повторить с третьим запросом. Выбираете класс "Private Cloud", фильтры, настраиваете представление и прикрепляете к Service Request'у как "Related Item".
 
-Шаг "Map Prompts"; позволяет связать переменные Runbook'а с переменными, которые выбрал пользователь
+Шаг "Map Prompts" позволяет связать переменные Runbook'а с переменными, которые выбрал пользователь
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-09.png" rel="attachment wp-att-5064"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-09-300x233.png" alt="conf-scsm-09" width="300" height="233" /></a>
 
@@ -81,7 +81,7 @@ tags:
 
 Проверяем работоспособность
   
-Заходим на портал и выбираем "наш"; Service Offering
+Заходим на портал и выбираем "наш" Service Offering
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-11.png" rel="attachment wp-att-5073"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/conf-scsm-11-300x141.png" alt="conf-scsm-11" width="300" height="141" /></a>
   

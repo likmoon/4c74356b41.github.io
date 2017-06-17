@@ -21,8 +21,8 @@ Configuration Payload
 Param ( [string] $nodeName )
 
 Import-DscResource -ModuleName PSDesiredStateConfiguration
-Import-DscResource -ModuleName @{ModuleName="xPSDesiredStateConfiguration"; ModuleVersion="3.0.3.4"}
-Import-DscResource -ModuleName @{ModuleName="xWebAdministration"; ModuleVersion="1.13.0.0"}
+Import-DscResource -ModuleName @{ModuleName="xPSDesiredStateConfiguration" ModuleVersion="3.0.3.4"}
+Import-DscResource -ModuleName @{ModuleName="xWebAdministration" ModuleVersion="1.13.0.0"}
 
 Node $nodeName
   {

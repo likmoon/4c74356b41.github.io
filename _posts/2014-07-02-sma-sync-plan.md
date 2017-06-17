@@ -16,7 +16,7 @@ tags:
   - SMA
   - Windows Azure Pack
 ---
-Периодически у пользователей возникает ошибка "Failed to load virtual machine templates for subscription <subscription ID>";.
+Периодически у пользователей возникает ошибка "Failed to load virtual machine templates for subscription <subscription ID>".
   
 **Workaround** - синхронизировать планы.
   
