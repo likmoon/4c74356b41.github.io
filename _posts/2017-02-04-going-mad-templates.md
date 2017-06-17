@@ -50,9 +50,11 @@ The thing with "Automation option"; most of the time it uses a slightly differen
 
 ### How do I fix missing properties?
 
-<del>[ARM Schemas?](https://github.com/Azure/azure-resource-manager-schemas)</del> no, just no.  
-<del>[Documentation by examples?](https://docs.microsoft.com/en-us/azure/templates)</del> yes, if it helps.  
-[Rest API!](https://docs.microsoft.com/en-us/rest/api/) always works, a bit cumbersome, but never fails.
+Option | Should I use it?
+--- | ---
+<del>[ARM Schemas?](https://github.com/Azure/azure-resource-manager-schemas)</del> | no, just no.  
+<del>[Documentation by examples?](https://docs.microsoft.com/en-us/azure/templates)</del> | yes, if it helps.  
+[Rest API!](https://docs.microsoft.com/en-us/rest/api/) | always works, a bit cumbersome, but never fails.
 
 ARM Templates have a JSON schema, and that schema is well defined (*take this with a grain of salt and read further*), I've linked the schema definitions repository. You can work your way through the schema to create a Template from scratch, but I doubt any sane person could handle all the humiliation they would have to go through to do that. Luckily, there are ways to ease the pain:
 
@@ -141,7 +143,7 @@ I recommend using this "workflow"; when working with ARM Templates:
   1. Look for existing examples on the web
   2. Export existing resources to create a base template (if you cant find an example, or if you are missing a lot of properties)
   3. Create and export resources if they don't exist yet. Remember that there are at least 4 ways to export resource when\after creating, some of those might not work for your particular case.
-  3. Consult <del>the schema</del> REST Api\Resource Explorer\Powershell\Azure CLI 2.0 and intellisense `notice that intellisense CAN BE MISTAKEN` when working your way through the template, use appropriate free tools, don't make your life harder
+  3. Consult <del>the schema</del> REST API\Resource Explorer\Powershell\Azure CLI 2.0 and intellisense (**notice that intellisense CAN BE MISTAKEN**) when working your way through the template, use appropriate free tools, don't make your life harder (all described in this article)
   4. Try deploying your template and [see what the errors are](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-deployment-operations) and fix them, errors can be obtained in the portal or using powershell\cli (and probably all the sdk's)
 
 ### Debug
