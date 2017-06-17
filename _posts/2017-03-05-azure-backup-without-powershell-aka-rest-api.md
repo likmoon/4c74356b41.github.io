@@ -13,7 +13,7 @@ tags:
   - Backup
   - Python
 ---
-Lets say you wanted to manage Azure Backup programmatically, but you are using Azure Cli, or Cli 2, or Python SDK, well, not Powershell, you only resort would be [Azure Rest API](http://stackoverflow.com/questions/42274160/how-to-manage-azure-backup-with-azure-python-sdk-or-azure-cli/42303540#42303540) (sigh). Well let&#8217;s use what we can.
+Lets say you wanted to manage Azure Backup programmatically, but you are using Azure Cli, or Cli 2, or Python SDK, well, not Powershell, you only resort would be [Azure Rest API](http://stackoverflow.com/questions/42274160/how-to-manage-azure-backup-with-azure-python-sdk-or-azure-cli/42303540#42303540) (sigh). Well let's use what we can.
 
 Rest Api calls are documented, but pretty poorly.
 
@@ -24,7 +24,7 @@ DELETE
 /Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{vaultName}/backupFabrics/{fabricName}/protectionContainers/{containerName}/protectedItems/{protectedItemName}?api-version=2016-06-01
 ```
 
-Well, only several slight nuances. WTH is fabricname? containername?  Notice how it doesn&#8217;t give any hint at ALL how to construct a proper query. Well, turns out you either have to guess, or get a list of protectable items (if you would want to get a single item you would be facing the same challenge).
+Well, only several slight nuances. WTH is fabricname? containername?  Notice how it doesn't give any hint at ALL how to construct a proper query. Well, turns out you either have to guess, or get a list of protectable items (if you would want to get a single item you would be facing the same challenge).
 
 Conveniently, a list of Protectable items (https://docs.microsoft.com/en-us/rest/api/recoveryservices/protectableitems) has instructions how to query it (not obvious, but if you scroll down to `filter` you will find those). So after some struggle you come up with this:
 
@@ -33,7 +33,7 @@ GET
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{vaultName}/backupProtectionContainers?$filter=backupManagementType eq 'AzureIaasVM'?api-version=2016-06-01"
 ```
 
-I believe those `IaasVMContainer;iaasvmcontainerv2;` and ,code>VM;iaasvmcontainerv2;</code> are constant if you are working with Azure VM&#8217;s that are added to Azure Backup. Which leads you to this: 
+I believe those `IaasVMContainer;iaasvmcontainerv2;` and ,code>VM;iaasvmcontainerv2;</code> are constant if you are working with Azure VM's that are added to Azure Backup. Which leads you to this: 
 
 ```
 DELETE

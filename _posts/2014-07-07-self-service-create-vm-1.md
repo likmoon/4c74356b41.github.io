@@ -17,7 +17,7 @@ tags:
   - System Center 2012 R2
   - Virtual Machine Manager
 ---
-Продолжаю цикл статей про самообслуживание пользователей. Перед прочтением этой статьи рекомендую ознакомиться с &#8220;[подготовительными процедурами](http://4c74356b41.com/post1139)&#8220;.
+Продолжаю цикл статей про самообслуживание пользователей. Перед прочтением этой статьи рекомендую ознакомиться с "[подготовительными процедурами](http://4c74356b41.com/post1139)".
 
 1. Создание виртуальной машины;
   
@@ -29,11 +29,11 @@ tags:
 
 **Что будет сделано**
   
-1. Создание Runbook&#8217;а; (часть 1)
+1. Создание Runbook'а; (часть 1)
   
-2. [Создание дочерних Runbook&#8217;ов](http://4c74356b41.com/post1227); (часть 2)
+2. [Создание дочерних Runbook'ов](http://4c74356b41.com/post1227); (часть 2)
   
-3. [Импорт Runbook&#8217;ов в SCSM](http://4c74356b41.com/post1261); (часть 3)
+3. [Импорт Runbook'ов в SCSM](http://4c74356b41.com/post1261); (часть 3)
   
 4. [Создание шаблонов для публикации на портале](http://4c74356b41.com/post1261); (часть 3)
   
@@ -41,7 +41,7 @@ tags:
   
 6. [Публикация и проверка](http://4c74356b41.com/post1284). (часть 4)
 
-**Создание Runbook&#8217;а**
+**Создание Runbook'а**
   
 Runbook, который будет создавать виртуальные машины, выглядит приблизительно так
   
@@ -57,7 +57,7 @@ Runbook, который будет создавать виртуальные м�
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_05.png" rel="attachment wp-att-5184"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_05-300x267.png" alt="pc_newvm_05" width="300" height="267" /></a>
   
-После этого необходимо заполнить runbook шагами. Первым шагом будет &#8220;Initialize Data&#8221;. Для создания шага в панели справа выберите пункт &#8220;Runbook Control&#8221; и действие &#8220;Initialize Data&#8221; и перетащите его в рабочую область.
+После этого необходимо заполнить runbook шагами. Первым шагом будет "Initialize Data";. Для создания шага в панели справа выберите пункт "Runbook Control"; и действие "Initialize Data"; и перетащите его в рабочую область.
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_01.png" rel="attachment wp-att-5175"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_01-151x300.png" alt="pc_newvm_01" width="151" height="300" /></a>
   
@@ -65,9 +65,9 @@ Runbook, который будет создавать виртуальные м�
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_03.png" rel="attachment wp-att-5178"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_03-300x205.png" alt="pc_newvm_03" width="300" height="205" /></a>
   
-Вы так же можете создать дополнительные переменные сейчас, на случай дальнейших кастомизаций. Я всегда рекомендую создавать запасные переменные, дело в том, что если Вы добавляете переменную после того как Вы создали шаблон runbook&#8217;а, он будет помечен как &#8220;failed&#8221; (или что-то в таком духе), и Вам придется пересоздавать шаблон и request offering.
+Вы так же можете создать дополнительные переменные сейчас, на случай дальнейших кастомизаций. Я всегда рекомендую создавать запасные переменные, дело в том, что если Вы добавляете переменную после того как Вы создали шаблон runbook'а, он будет помечен как "failed"; (или что-то в таком духе), и Вам придется пересоздавать шаблон и request offering.
   
-Для того, чтобы шаги были связаны, Вам необходимо создать link между шагами. При наведении мышки на шаг Вы заметите маленькие стрелочки по бокам. Та что слева - &#8220;вход&#8221;, а что справа &#8220;выход&#8221;. Таким образом, для связывания двух шагов Вам нужно провести link между выходом однога шага ко входу другого.
+Для того, чтобы шаги были связаны, Вам необходимо создать link между шагами. При наведении мышки на шаг Вы заметите маленькие стрелочки по бокам. Та что слева - "вход";, а что справа "выход";. Таким образом, для связывания двух шагов Вам нужно провести link между выходом однога шага ко входу другого.
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_20.png" rel="attachment wp-att-5218"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_20.png" alt="pc_newvm_20" width="251" height="90" /></a>
 
@@ -89,11 +89,11 @@ Connector: SCSM Connector
   
 Class: Service Request
   
-Filter: &#8220;SC Object GUID&#8221; equals {SR GUID&#8221; from &#8220;Initialize Data&#8221;}
+Filter: "SC Object GUID"; equals {SR GUID"; from "Initialize Data";}
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_st_03.png" rel="attachment wp-att-5237"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_st_03-300x182.png" alt="pc_st_03" width="300" height="182" /></a>
   
-Для того, чтобы в поле Value передать значение из какого-либо шага runbook&#8217;а, Вам необходимо нажать правой кнопкой мыши и выбрать Subscribe >> Published Data
+Для того, чтобы в поле Value передать значение из какого-либо шага runbook'а, Вам необходимо нажать правой кнопкой мыши и выбрать Subscribe >> Published Data
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_09.png" rel="attachment wp-att-5194"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_09-300x259.png" alt="pc_newvm_09" width="300" height="259" /></a>
 
@@ -105,7 +105,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from &#8220;Get SR&#8221;}
+Object GUID: {SC Object GUID from "Get SR";}
   
 Related Class: Virtual Machine Template
   
@@ -121,7 +121,7 @@ Connector: SCSM Connector
   
 Class: Virtual Machine Template
   
-Filter: &#8220;SC Object GUID&#8221; equals {Related object GUID from &#8220;Get Relationship - SR to Template&#8221;}
+Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship - SR to Template";}
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_11.png" rel="attachment wp-att-5197"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_11-300x282.png" alt="pc_newvm_11" width="300" height="282" /></a>
 
@@ -133,7 +133,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object GUID: {SC Object GUID from &#8220;Get SR&#8221;}
+Object GUID: {SC Object GUID from "Get SR";}
   
 Related Class: Active Directory User
 
@@ -145,7 +145,7 @@ Connector: SCSM Connector
   
 Class: Service Templates
   
-Filter: &#8220;SC Object GUID&#8221; equals {Related object GUID from &#8220;Get Relationship - Affected User&#8221;}
+Filter: "SC Object GUID"; equals {Related object GUID from "Get Relationship - Affected User";}
 
 **7. Get Relationship SR to Cloud**
   
@@ -155,7 +155,7 @@ Connector: SCSM Connector
   
 Object Class: Service Request
   
-Object Class: {SC Object GUID from &#8220;Get SR&#8221;}
+Object Class: {SC Object GUID from "Get SR";}
   
 Related Class: Private Cloud
 
@@ -167,9 +167,9 @@ Connector: SCSM Connector
   
 Class: Private Cloud
   
-Filter: &#8220;SC Object GUID&#8221; equals {Related object GUID&#8221; from &#8220;Get Relationship SR to Cloud&#8221;}
+Filter: "SC Object GUID"; equals {Related object GUID"; from "Get Relationship SR to Cloud";}
 
-Теперь я поясню, что тут происходит. Второй шаг берет SR GUID, который SCSM передает в Runbook, и запрашивает Service Request из SCSM. После этого шаги 3, 5 и 7 запрашивают связанные с Service Request объекты, а шаги 4, 6 и 8 &#8220;получают&#8221; эти объекты.
+Теперь я поясню, что тут происходит. Второй шаг берет SR GUID, который SCSM передает в Runbook, и запрашивает Service Request из SCSM. После этого шаги 3, 5 и 7 запрашивают связанные с Service Request объекты, а шаги 4, 6 и 8 "получают"; эти объекты.
 
 **9. Run .Net Script** (опциональный параметр, я использую его для генирации пароля администратора)
   
@@ -177,7 +177,7 @@ Filter: &#8220;SC Object GUID&#8221; equals {Related object GUID&#8221; from &#8
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_13.png" rel="attachment wp-att-5204"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_13-300x138.png" alt="pc_newvm_13" width="300" height="138" /></a>
 
-Обратите внимание, что в разделе &#8220;Published Data&#8221;, переменная указывается без знака &#8220;$&#8221;. Вы можете просто создать еще одну переменную и запрашивать пароль на портале.
+Обратите внимание, что в разделе "Published Data";, переменная указывается без знака "$";. Вы можете просто создать еще одну переменную и запрашивать пароль на портале.
 
 **10. Create VM from Template**
   
@@ -191,23 +191,23 @@ Properties:
   
 Destination Type - Cloud
   
-Destination - {&#8220;Display Name from &#8220;Get Object - Cloud&#8221;}
+Destination - {"Display Name from "Get Object - Cloud";}
   
 Path - не меняем
   
-VM Name - {VM Name from &#8220;Initialize Data&#8221;}
+VM Name - {VM Name from "Initialize Data";}
   
-Source Template Name - {Name from &#8220;Get Object - Template&#8221;}
+Source Template Name - {Name from "Get Object - Template";}
   
 Cloud Capability Profile - выберите подходящий Вам
   
-Computer Name - {VM Name from &#8220;Initialize Data&#8221;}
+Computer Name - {VM Name from "Initialize Data";}
   
 Description - опционально
   
 Admin User Name - administrator
   
-Admin Password - {Password from &#8220;Run .Net Script&#8221;}<a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_14.png" rel="attachment wp-att-5207"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_14-300x205.png" alt="pc_newvm_14" width="300" height="205" /></a>
+Admin Password - {Password from "Run .Net Script";}<a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_14.png" rel="attachment wp-att-5207"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_14-300x205.png" alt="pc_newvm_14" width="300" height="205" /></a>
 
 **11. Get VM**
   
@@ -215,7 +215,7 @@ Action: Get VM
   
 Connector: VMM Connector
   
-Filter: VM Name equals {VM Name from &#8220;Initialize Data&#8221;}
+Filter: VM Name equals {VM Name from "Initialize Data";}
 
 **12. Update VM**
   
@@ -223,13 +223,13 @@ Action: Get VM
   
 Connector: VMM Connector
   
-VM ID: {VM ID from &#8220;Get VM&#8221;}
+VM ID: {VM ID from "Get VM";}
   
-Owner: domain{User Name from &#8220;Get Object - Affected User}
+Owner: domain{User Name from "Get Object - Affected User}
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_15.png" rel="attachment wp-att-5210"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_15-300x251.png" alt="pc_newvm_15" width="300" height="251" /></a>
   
-Последние 2 действия нужны для смены владельца виртуальной машины, чтобы создатель виртуальной машины получил права на управления её через портал SCSM в дальнейшем. Когда я указывал владельца при создании машины через шаг &#8220;Create VM from Template&#8221;, разворачивание заканчивалось ошибкой, это workaround.
+Последние 2 действия нужны для смены владельца виртуальной машины, чтобы создатель виртуальной машины получил права на управления её через портал SCSM в дальнейшем. Когда я указывал владельца при создании машины через шаг "Create VM from Template";, разворачивание заканчивалось ошибкой, это workaround.
 
 **13. Launch VM**
   
@@ -241,4 +241,4 @@ Owner: domain{User Name from &#8220;Get Object - Affected User}
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_16.png" rel="attachment wp-att-5214"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/pc_newvm_16-300x217.png" alt="pc_newvm_16" width="300" height="217" /></a>
   
-Вы могли обратить внимание на {IP from &#8220;Launch VM&#8221;}. Эта переменная содержит IP виртуальной машины из дочернего ранбука, подробнее в [следующем посте](http://4c74356b41.com/post1227).
+Вы могли обратить внимание на {IP from "Launch VM";}. Эта переменная содержит IP виртуальной машины из дочернего ранбука, подробнее в [следующем посте](http://4c74356b41.com/post1227).

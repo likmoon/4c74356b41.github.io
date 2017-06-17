@@ -1,6 +1,6 @@
 ---
 id: 1415
-title: '&#8220;Failed to create virtual machine&#8221; при создании виртуальной машины в Windows Azure Pack'
+title: '"Failed to create virtual machine"; при создании виртуальной машины в Windows Azure Pack'
 date: 2014-07-24T23:00:38+00:00
 author: rootilo
 layout: post
@@ -15,7 +15,7 @@ tags:
   - Virtual Machine Manager
   - Windows Azure Pack
 ---
-Failed to create virtual machine&#8217;vmname&#8217;.
+Failed to create virtual machine'vmname'.
   
 Failed to submit operation request.
 
@@ -31,7 +31,7 @@ Description: Web Service has got a callback from OData framework about an error.
   
 Exception message = An error occurred while processing this request.
   
-Inner exception message = The property &#8220;DynamicMemoryMinimumMB&#8221; does not exist on type &#8220;VMM.VirtualMachine&#8221;. Make sure to only use property names that are defined by the type.
+Inner exception message = The property "DynamicMemoryMinimumMB"; does not exist on type "VMM.VirtualMachine";. Make sure to only use property names that are defined by the type.
   
 Response status code = 400
   

@@ -12,7 +12,7 @@ tags:
   - Azure
   - PowerShell
 ---
-Recently Microsoft <a href="https://azure.microsoft.com/en-us/blog/announcing-auto-shutdown-for-vms-using-azure-resource-manager/" target="_blank">announced</a> the ability to create auto-shutdown policies for ARM VM&#8217;s, but there&#8217;s no capacity to automate this, or is there?
+Recently Microsoft <a href="https://azure.microsoft.com/en-us/blog/announcing-auto-shutdown-for-vms-using-azure-resource-manager/" target="_blank">announced</a> the ability to create auto-shutdown policies for ARM VM's, but there's no capacity to automate this, or is there?
 
 Lets create a following hashtable in Powershell:
 

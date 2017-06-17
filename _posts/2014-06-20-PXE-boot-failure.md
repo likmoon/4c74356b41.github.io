@@ -17,6 +17,6 @@ tags:
   
 Administration >> Site >> Site Settings >> Site Systems >> Distribution Point - проверяем выключен ли мультикаст.
   
-Software Library >> >> Operating System >> Operating System Images >> образ который используется для PXE >> убрана ли галочка &#8220;allow this package to be transferred via multicast&#8221;.
+Software Library >> >> Operating System >> Operating System Images >> образ который используется для PXE >> убрана ли галочка "allow this package to be transferred via multicast";.
 
 Если это так, проверяем DHCP scope и убираем опцию 43. Voila!

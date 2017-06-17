@@ -34,4 +34,4 @@ $vm | Set-SCVirtualMachine -UserRole $Role
 $vm | Set-SCVirtualMachine -OnBehalfOfUser $Role -OnBehalfOfUserRole $role -Owner $Owner
 ```
 
-I got really bored with assigning random VM&#8217;s by hand
+I got really bored with assigning random VM's by hand

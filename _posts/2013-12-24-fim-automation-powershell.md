@@ -13,7 +13,7 @@ tags:
   - FIM
   - Guide
 ---
-Главный вопрос: &#8220;Зачем?&#8221;.
+Главный вопрос: "Зачем?";.
   
 Ответов может быть много, в моем случае я хотел использовать Powershell для запуска заданий агентов синхронизации на сервере без данного модуля.
 
@@ -27,7 +27,7 @@ Microsoft.ResourceManagement.Logging.dll (для FIM 2010)
   
 Microsoft.ResourceManagement.dll
   
-Берем их из &#8220;C:Program FilesMicrosoft Forefront Identity Manager2010Service&#8221;. После чего, необходимо зарегистрировать модуль и dll файлы в Global Assembly Cache.
+Берем их из "C:Program FilesMicrosoft Forefront Identity Manager2010Service";. После чего, необходимо зарегистрировать модуль и dll файлы в Global Assembly Cache.
 
 Командная строка Visual Studio с права администратора:
   

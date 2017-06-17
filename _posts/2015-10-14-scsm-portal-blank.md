@@ -1,6 +1,6 @@
 ---
 id: 3511
-title: 'портал самообслуживания SCSM &#8220;белый&#8221;'
+title: 'портал самообслуживания SCSM "белый";'
 date: 2015-10-14T12:21:40+00:00
 author: rootilo
 layout: post
@@ -17,11 +17,11 @@ tags:
   
 <img src="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/62/41/metablogapi/3326.image_7CE0683A.png" alt="" width="574" height="327" />
   
-2. В менеджере IIS проверьте Application Settings у сайта Service Manager, поле SMPortal\_WebContentServer\_URL должно соответствовать тому адресу, по-которому Вы открываете портал (если FQDN - то FQDN, если NETBIOS то и в этом поле тоже NETBIOS). В конфиг файле сайта (диск:inetpubwwwrootwssVirtualDirectoriesService Manager Portal) тот же самый ключ должен иметь точно такое же значение &#8220;value&#8221;
+2. В менеджере IIS проверьте Application Settings у сайта Service Manager, поле SMPortal\_WebContentServer\_URL должно соответствовать тому адресу, по-которому Вы открываете портал (если FQDN - то FQDN, если NETBIOS то и в этом поле тоже NETBIOS). В конфиг файле сайта (диск:inetpubwwwrootwssVirtualDirectoriesService Manager Portal) тот же самый ключ должен иметь точно такое же значение "value";
   
 <img id="7918120a-a928-4720-8dc4-381ae77b386f" title="Editing SharePoint Web Config File for the WCS URL" src="https://i-technet.sec.s-msft.com/dynimg/IC559634.jpeg" alt="Editing SharePoint Web Config File for the WCS URL" />
   
-3. Проверьте что MIME Type .xap соответствует значению &#8220;application/x-silverligh-app&#8221;.
+3. Проверьте что MIME Type .xap соответствует значению "application/x-silverligh-app";.
   
 Ссылки:
   

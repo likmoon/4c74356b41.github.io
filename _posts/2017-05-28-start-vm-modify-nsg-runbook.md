@@ -15,7 +15,7 @@ tags:
   - Azure Resource Manager
   - PowerShell
 ---
-So I decided to move my development machine to Azure and I&#8217;m a bit worried by the fact that the RDP is wide open to all the evil guys out there (as I ofter work from different places and the IP is never static in those places, I cannot just pre create NSG rule to fix that).
+So I decided to move my development machine to Azure and I'm a bit worried by the fact that the RDP is wide open to all the evil guys out there (as I ofter work from different places and the IP is never static in those places, I cannot just pre create NSG rule to fix that).
 
 Also, I felt like running the VM 24\7 is a bit of an overkill, so I decided to fix myself a runbook to take care of those concerns. You could also use autoshutdown as part of the solution (I'm using both)
   
@@ -23,7 +23,7 @@ The runbook would turn the VM on or off (depending on the state of the VM), and 
 
 Prereq: the VM you want to toggle and the NSG created for the VM with the rule to edit with your external IP.
   
-I won&#8217;t go through all the steps with extreme detail, but I will give out links and code to achieve the end goal.
+I won't go through all the steps with extreme detail, but I will give out links and code to achieve the end goal.
 
   1. [Create a powershell runbook](https://docs.microsoft.com/en-us/azure/automation/automation-creating-importing-runbook) (not workflow).
   2. [Insert](https://docs.microsoft.com/en-us/azure/automation/automation-edit-textual-runbook) the code snippet (at the end of the post), adjust it to your values.

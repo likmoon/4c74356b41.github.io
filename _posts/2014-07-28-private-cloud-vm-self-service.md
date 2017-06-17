@@ -19,7 +19,7 @@ tags:
   - System Center 2012 R2
   - Virtual Machine Manager
 ---
-Я подготовил файл variable.xml, с помощью которого можно развернуть лабораторию для цикла статей &#8220;[Private Cloud VM Self Service](http://4c74356b41.com/?tag=private-cloud-vm-self-service)&#8220;:
+Я подготовил файл variable.xml, с помощью которого можно развернуть лабораторию для цикла статей "[Private Cloud VM Self Service](http://4c74356b41.com/?tag=private-cloud-vm-self-service)":
 
 1. [Создание виртуальной машины](http://4c74356b41.com/post1176);
   

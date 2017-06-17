@@ -1,6 +1,6 @@
 ---
 id: 3151
-title: 'SCOM не может скачать Management Pack&#8217;и из онлайн каталога'
+title: 'SCOM не может скачать Management Pack'и из онлайн каталога'
 date: 2015-09-15T15:54:35+00:00
 author: rootilo
 layout: post

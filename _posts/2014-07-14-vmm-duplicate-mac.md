@@ -30,7 +30,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/vmm-02.png" rel="attachment wp-att-5366"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/vmm-02-300x143.png" alt="vmm-02" width="300" height="143" /></a>
   
-И собственно то самое &#8220;сохранение настроек родительской системы&#8221;
+И собственно то самое "сохранение настроек родительской системы";
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/vmm-03.png" rel="attachment wp-att-5369"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/vmm-03-300x211.png" alt="vmm-03" width="300" height="211" /></a>
   

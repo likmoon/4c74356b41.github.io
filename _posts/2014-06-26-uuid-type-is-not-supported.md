@@ -1,6 +1,6 @@
 ---
 id: 857
-title: 'Ошибка при первом логине &#8220;The universal unique identifier (UUID) type is not supported&#8221;'
+title: 'Ошибка при первом логине "The universal unique identifier (UUID) type is not supported";'
 date: 2014-06-26T23:28:17+00:00
 author: rootilo
 layout: post
@@ -18,10 +18,10 @@ tags:
 
 **Workaround 1**
   
-Добавьте рестарт в последний таск вашего Task Sequence&#8217;а. SMSTSPostAction shutdown /r /t 0
+Добавьте рестарт в последний таск вашего Task Sequence'а. SMSTSPostAction shutdown /r /t 0
 
 **Workaround 2**
   
-Выполните следующую команду из Task Sequence&#8217;а. cmd /c reg add &#8220;HKLMSYSTEMCurrentControlSetServicesgpsvc&#8221; /v Type /t REG_DWORD /d 0x10 /f
+Выполните следующую команду из Task Sequence'а. cmd /c reg add "HKLMSYSTEMCurrentControlSetServicesgpsvc"; /v Type /t REG_DWORD /d 0x10 /f
 
 Подробнее [KB2976660](http://support.microsoft.com/kb/2976660/en-us)

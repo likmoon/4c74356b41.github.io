@@ -18,7 +18,7 @@ tags:
 ---
 [Репост](http://www.miru.ch/sma-workflows-and-remoting-how-to-deal-with-variable-scoping/)  
 
-SMA использует PowerShell Workflows, это накладывает некоторые ограничения, например при обращении к переменным или невозможность использования Invoke-Command. Для вызова команд недоступных в PowerShell Workflows можно использовать InlineScript. При этом все что &#8220;внутри&#8221; InlineScript выполняется &#8220;отдельно&#8221;, некое подобие sandbox&#8217;а.
+SMA использует PowerShell Workflows, это накладывает некоторые ограничения, например при обращении к переменным или невозможность использования Invoke-Command. Для вызова команд недоступных в PowerShell Workflows можно использовать InlineScript. При этом все что "внутри"; InlineScript выполняется "отдельно";, некое подобие sandbox'а.
 
 ```
 Workflow Get-VMReplicaStatus
@@ -36,7 +36,7 @@ Workflow Get-VMReplicaStatus
 }
 ```
 
-В данном случае переменная VMName не будет доступна в ScriptBlock&#8217;е, т.к. $USING:VMName используется для передачи переменной из PowerShell Workflow в InlineScript. Решением будет переобозначить переменную в InlineScript&#8217;е.
+В данном случае переменная VMName не будет доступна в ScriptBlock'е, т.к. $USING:VMName используется для передачи переменной из PowerShell Workflow в InlineScript. Решением будет переобозначить переменную в InlineScript'е.
 
 ```
 Workflow Get-VMReplicaStatus

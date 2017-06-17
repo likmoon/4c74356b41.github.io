@@ -147,4 +147,4 @@ workflow RenameVM
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sma-rename-vm.png" rel="attachment wp-att-5349"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sma-rename-vm-300x203.png" alt="sma-rename-vm" width="300" height="203" /></a>
   
-Так как мы используем триггер VMM Virtual Machine, роли виртуальных машин не будут затронуты этим runbook&#8217;ом.
+Так как мы используем триггер VMM Virtual Machine, роли виртуальных машин не будут затронуты этим runbook'ом.

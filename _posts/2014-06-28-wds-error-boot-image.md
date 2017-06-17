@@ -12,7 +12,7 @@ tags:
   - Configuration Manager
   - Copypaste
 ---
-И Вы находите ошибку приблизительно следующего содержания в Event log&#8217;е
+И Вы находите ошибку приблизительно следующего содержания в Event log'е
   
 Faulting application name: svchost.exe_WDSServer, version: 6.3.9600.16384, time stamp: 0x5215dfe3
   

@@ -11,7 +11,7 @@ categories:
 tags:
   - Azure
 ---
-so yeah, i got really greedy and converted my blog to a shared tier, but it doesn&#8217;t support AlwaysOn. Well, lets fix that.
+so yeah, i got really greedy and converted my blog to a shared tier, but it doesn't support AlwaysOn. Well, lets fix that.
 
 Just créate a webjob with the following script (you have to name it something.ps1)
 

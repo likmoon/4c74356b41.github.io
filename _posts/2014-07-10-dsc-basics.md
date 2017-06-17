@@ -30,7 +30,7 @@ tags:
 
 Для функционирования DSC необходим Windows Management Framework 4.0.
   
-Из коробки DSC обладает следующими &#8220;resource providers&#8221;: Registry, Script, Archive, File, WindowsFeature, Package, Environment, Group, User, Log, Service, WindowsProcess.
+Из коробки DSC обладает следующими "resource providers";: Registry, Script, Archive, File, WindowsFeature, Package, Environment, Group, User, Log, Service, WindowsProcess.
 
 <table border="1" cellspacing="1" cellpadding="3">
   <tr>

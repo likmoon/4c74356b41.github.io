@@ -19,9 +19,9 @@ Turns out its pretty easy and straight forward:
   2. Join it to a chat and get chat id
   3. Send messages 😉
 
-First two are pretty straight forward, I&#8217;ve added the link to the Bot creation tutorial, to get the chat ID after you&#8217;ve added the bot do this: `https://api.telegram.org/bot<YourBOTToken>/getUpdates` and look for the chat object in the resulting JSON, it will have a `node` property, chatid is a negative number.
+First two are pretty straight forward, I've added the link to the Bot creation tutorial, to get the chat ID after you've added the bot do this: `https://api.telegram.org/bot<YourBOTToken>/getUpdates` and look for the chat object in the resulting JSON, it will have a `node` property, chatid is a negative number.
 
-To work with Bot I&#8217;ve created the following Function using C# (you can use anything you want), this function will take http input and send it to Telegram chat, you can create any trigger you like:
+To work with Bot I've created the following Function using C# (you can use anything you want), this function will take http input and send it to Telegram chat, you can create any trigger you like:
 
 ```
 using System.Net;

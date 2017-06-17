@@ -1,6 +1,6 @@
 ---
 id: 455
-title: 'Как обновить boot image во всех Task Sequnce&#8217;ах'
+title: 'Как обновить boot image во всех Task Sequnce'ах'
 date: 2014-06-12T22:03:47+00:00
 author: rootilo
 layout: post
@@ -13,7 +13,7 @@ tags:
   - Copypaste
   - Guide
 ---
-В случае если у Вас много TS&#8217;ов и лень обновлять руками.
+В случае если у Вас много TS'ов и лень обновлять руками.
 
 ```
 Get-WmiObject -ComputerName localhost -Namespace rootsmssite_cas 

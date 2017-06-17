@@ -1,6 +1,6 @@
 ---
 id: 109
-title: '&#8220;Cross forest&#8221; миграция: Active Directory 2003 > 2008 r2, Exchange 2003 > 2010, пользователи и компьютеры, Синхронизация адресных книг'
+title: '"Cross forest"; миграция: Active Directory 2003 > 2008 r2, Exchange 2003 > 2010, пользователи и компьютеры, Синхронизация адресных книг'
 date: 2013-07-30T00:00:34+00:00
 author: rootilo
 layout: post

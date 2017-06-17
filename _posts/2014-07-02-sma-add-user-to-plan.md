@@ -23,7 +23,7 @@ tags:
   
 1. Работающий [SPF](http://4c74356b41.com/post466), [SMA](http://4c74356b41.com/post678) и [WAP](http://4c74356b41.com/post422)
   
-2. SPF и SMA доверяющие друг-другу (сертификаты endpoint&#8217;ов)
+2. SPF и SMA доверяющие друг-другу (сертификаты endpoint'ов)
   
 3. Пользователь spf-app-pool в группе smaAdmingroup (на веб сервис ролях SMA)
   

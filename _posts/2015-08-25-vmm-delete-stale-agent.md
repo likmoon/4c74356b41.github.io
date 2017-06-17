@@ -14,7 +14,7 @@ tags:
 ---
 В интернетах много написано про то как снести агента VMM с core сервера:
   
-Get-WMIObject -Class Win32_product или Regedit > HKLM > Software > Microsoft > Windows > CurrentVersion > Uninstall, там находим GUID MSI пакета и далее msiexec /x &#8220;{GUID}&#8221; или wmic get product name &#8220;Имя продукта&#8221; delete&#8230; И это все прекрасно. Когда эти записи в реестреWMI есть. А если их нет, а агент есть? 🙂
+Get-WMIObject -Class Win32_product или Regedit > HKLM > Software > Microsoft > Windows > CurrentVersion > Uninstall, там находим GUID MSI пакета и далее msiexec /x "{GUID}"; или wmic get product name "Имя продукта"; delete&#8230; И это все прекрасно. Когда эти записи в реестреWMI есть. А если их нет, а агент есть? 🙂
 
 CopyPaste моего [поста](https://social.technet.microsoft.com/Forums/en-US/aa122e7f-ef6c-44ee-aa23-243f65b20eb4/unable-to-remove-vmm-agent-from-hyperv-host) на social.Technet
 
@@ -34,7 +34,7 @@ HKEY\_LOCAL\_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Perflib\_V2Pro
 ```
 2. We changed build number to the one from UR6 (something.8002 or whatever, you can google it). In description and in hex (version string) and path to msi under C:\Windows\Installer. You can figure out the MSI you need by size, for example.
 
-3. The program was still missing in Add\Remove but we were able to remove program with https://support.microsoft.com/mats/program\_install\_and_uninstall (don&#8217;t forget to shutdown SCVMMAgent service before doing so).
+3. The program was still missing in Add\Remove but we were able to remove program with https://support.microsoft.com/mats/program\_install\_and_uninstall (don't forget to shutdown SCVMMAgent service before doing so).
 
 4. We used the SC utility to delete VMM Agent service (sc delete SCVMMAgent)
 

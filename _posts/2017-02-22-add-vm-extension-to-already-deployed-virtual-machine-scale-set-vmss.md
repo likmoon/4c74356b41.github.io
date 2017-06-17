@@ -13,7 +13,7 @@ tags:
   - VM extension
   - VMSS
 ---
-Basically, I&#8217;m going to show 2 ways of doing that powershell and ARM.
+Basically, I'm going to show 2 ways of doing that powershell and ARM.
 
 Powershell:
 

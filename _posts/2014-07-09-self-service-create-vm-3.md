@@ -19,11 +19,11 @@ tags:
 ---
 Продолжим настройку платформы самообслуживания пользователей.
   
-1. [Создание Runbook&#8217;а](http://4c74356b41.com/post1176); (часть 1)
+1. [Создание Runbook'а](http://4c74356b41.com/post1176); (часть 1)
   
-2. [Создание дочерних Runbook&#8217;ов](http://4c74356b41.com/post1227); (часть 2)
+2. [Создание дочерних Runbook'ов](http://4c74356b41.com/post1227); (часть 2)
   
-3. Импорт Runbook&#8217;ов в SCSM; (часть 3)
+3. Импорт Runbook'ов в SCSM; (часть 3)
   
 4. Создание шаблонов для публикации на портале; (часть 3)
   
@@ -31,9 +31,9 @@ tags:
   
 6. [Публикация и проверка](http://4c74356b41.com/post1284). (часть 4)
 
-**Импортирование runbook&#8217;ов в SCSM**
+**Импортирование runbook'ов в SCSM**
   
-Откройте консоль SCSM и в закладке Administration синхронизируйте коннектор с Orchestrator&#8217;ом
+Откройте консоль SCSM и в закладке Administration синхронизируйте коннектор с Orchestrator'ом
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-00.png" rel="attachment wp-att-5098"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-00-300x146.png" alt="import-runbook-00" width="300" height="146" /></a>
   
@@ -45,17 +45,17 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-01.png" rel="attachment wp-att-5101"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-01-300x77.png" alt="import-runbook-01" width="300" height="77" /></a>
   
-Дайте шаблону название, выберите management pack или создайте новый (рекомендуется). Нажмите &#8220;OK&#8221; и закройте открывшееся после этого окно.
+Дайте шаблону название, выберите management pack или создайте новый (рекомендуется). Нажмите "OK"; и закройте открывшееся после этого окно.
 
 Теперь нужно подготовить шаблон собственно Service Offering. В закладке Library откройте пункт Templates и создайте новый шаблон
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-02.png" rel="attachment wp-att-5105"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-02-300x93.png" alt="import-runbook-02" width="300" height="93" /></a>
   
-Дайте ему название, выберите класс &#8220;Service Request&#8221;
+Дайте ему название, выберите класс "Service Request";
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-03.png" rel="attachment wp-att-5108"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-03-300x278.png" alt="import-runbook-03" width="300" height="278" /></a>
   
-После этого, в новом окне заполните поля: название, приоритет , срочность - обязательно, а остальные - желательно. Перейдите в закладку &#8220;Activities&#8221; и нажмите плюсик справа сверху
+После этого, в новом окне заполните поля: название, приоритет , срочность - обязательно, а остальные - желательно. Перейдите в закладку "Activities"; и нажмите плюсик справа сверху
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-04.png" rel="attachment wp-att-5111"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-04-300x244.png" alt="import-runbook-04" width="300" height="244" /></a>
   
@@ -63,7 +63,7 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-05.png" rel="attachment wp-att-5115"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-05-287x300.png" alt="import-runbook-05" width="287" height="300" /></a>
   
-Теперь Вам предстоит очень ответственный момент, необходимо замапить (сопоставить с) переменные из runbook&#8217;а. Переменную SR GUID необходимо сопоставить с переменной ID Service Request, а остальные переменные с соответствующими переменными runbook&#8217;а. В данном случае, VM Name со второй переменной
+Теперь Вам предстоит очень ответственный момент, необходимо замапить (сопоставить с) переменные из runbook'а. Переменную SR GUID необходимо сопоставить с переменной ID Service Request, а остальные переменные с соответствующими переменными runbook'а. В данном случае, VM Name со второй переменной
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-06.png" rel="attachment wp-att-5118"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-06-300x249.png" alt="import-runbook-06" width="300" height="249" /></a>
   
@@ -73,4 +73,4 @@ tags:
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-08.png" rel="attachment wp-att-5126"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/import-runbook-08-300x205.png" alt="import-runbook-08" width="300" height="205" /></a>
   
-Осталось только сохранить шаблон Service Request&#8217;а и читать следующую статью, в которой я поясню для чего мы сопоставляли переменные.
+Осталось только сохранить шаблон Service Request'а и читать следующую статью, в которой я поясню для чего мы сопоставляли переменные.

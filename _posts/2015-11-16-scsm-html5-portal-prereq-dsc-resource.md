@@ -15,7 +15,7 @@ tags:
 ---
 
 <div>
-  You need to attach 2012r2 dvd with source files and point &#8220;source&#8221; (in framework 3.5 parts) to dvdsourcessxs for this to work.
+  You need to attach 2012r2 dvd with source files and point "source"; (in framework 3.5 parts) to dvdsourcessxs for this to work.
 </div>
 
 ```

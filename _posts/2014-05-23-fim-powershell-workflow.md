@@ -18,13 +18,13 @@ tags:
   
 - powershell version 3.0 -command путь\_до\_скрипта.ps1 -TargetGuid $fimwf.TargetId.Guid (чтобы передать параметры в скрипт), а в скрипт нужно добавить param([guid]$TargetGuid)
   
-- добавить в файл &#8220;C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\Microsoft.ResourceManagement.Service.exe.config&#8221;
+- добавить в файл "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\Microsoft.ResourceManagement.Service.exe.config";
 
 <startup>
   
-<supportedRuntime version=&#8221;v4.0&#8243;/>
+<supportedRuntime version=";v4.0&#8243;/>
   
-<supportedRuntime version=&#8221;v2.0.50727&#8243;/>
+<supportedRuntime version=";v2.0.50727&#8243;/>
   
 </startup>
 

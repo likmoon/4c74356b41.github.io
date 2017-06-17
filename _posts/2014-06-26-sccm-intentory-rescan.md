@@ -17,25 +17,25 @@ tags:
 
 1. Запустите wbemtest от имени администратор;<a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_01.png" rel="attachment wp-att-4832"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_01-300x233.png" alt="sccm_hw_full_01" width="300" height="233" /></a>
 
-2. Нажмите &#8220;Connect&#8217;;
+2. Нажмите "Connect';
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_02.png" rel="attachment wp-att-4835"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_02-289x300.png" alt="sccm_hw_full_02" width="289" height="300" /></a>
 
-3. Введите &#8220;rootccminvagt&#8221; в поле &#8220;Namespace&#8221;;
+3. Введите "rootccminvagt"; в поле "Namespace";;
   
-4. Нажмите &#8220;Enum Classes&#8221;;
+4. Нажмите "Enum Classes";;
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_03.png" rel="attachment wp-att-4839"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_03-300x233.png" alt="sccm_hw_full_03" width="300" height="233" /></a>
 
-5. Выберите &#8220;Recursive&#8221; и нажмите &#8220;OK&#8221;
+5. Выберите "Recursive"; и нажмите "OK";
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_04.png" rel="attachment wp-att-4842"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_04-300x134.png" alt="sccm_hw_full_04" width="300" height="134" /></a>
 
-6. Найдите &#8220;InventoryActionStatus&#8221; и дважды кликните по нему мышкой;
+6. Найдите "InventoryActionStatus"; и дважды кликните по нему мышкой;
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_00.png" rel="attachment wp-att-4829"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_00-300x182.png" alt="sccm_hw_full_00" width="300" height="182" /></a>
 
-7. Выберите &#8220;Instances&#8221;;
+7. Выберите "Instances";;
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_05.png" rel="attachment wp-att-4845"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/sccm_hw_full_05-300x258.png" alt="sccm_hw_full_05" width="300" height="258" /></a>
 

@@ -15,7 +15,7 @@ tags:
 ---
 Как изменить тип таск сиквенса с OSD на Application или наоборот. Чтож, выясняется что это очень просто.
   
-Любой таск сиквенс что содержит следующие &#8220;шаги&#8221; будет иметь значение 2 в свойстве Type **WMI **класса **SMS_TaskSequencePackage**.
+Любой таск сиквенс что содержит следующие "шаги"; будет иметь значение 2 в свойстве Type **WMI **класса **SMS_TaskSequencePackage**.
 
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/SCCM_TS_Type.png" rel="attachment wp-att-4854"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/SCCM_TS_Type-300x162.png" alt="SCCM_TS_Type" width="300" height="162" /></a>
 

@@ -18,7 +18,7 @@ tags:
   
 2. Создание необходимых пакетов
   
-3. Создание необходимых Task Sequence&#8217;ов (далее TS)
+3. Создание необходимых Task Sequence'ов (далее TS)
   
 4. Связывание компьютеров в SCCM
   
@@ -44,7 +44,7 @@ tags:
 
 2. Установка роли State Migration Point
   
-Открываем консоль, далее топаем в Administration > Sites, правой кнопкой мыши на необходимый сайт &#8220;Add Site System Roles&#8221;. В случае если у Вас Standalone Primary Site (а это верно для 99.99% читающих это) нажимайте на кнопку &#8220;далее&#8221; N-нное количество раз, не забудьте выбрать роль State Migration Point, указать папку для хранения данных и срок удержания данных после успешной миграции.
+Открываем консоль, далее топаем в Administration > Sites, правой кнопкой мыши на необходимый сайт "Add Site System Roles";. В случае если у Вас Standalone Primary Site (а это верно для 99.99% читающих это) нажимайте на кнопку "далее"; N-нное количество раз, не забудьте выбрать роль State Migration Point, указать папку для хранения данных и срок удержания данных после успешной миграции.
 
 **Создание необходимых пакетов**
   
@@ -54,15 +54,15 @@ tags:
 
 2. Добавление пакета USMT.
   
-USMT 6.3 создается при установке SCCM, нам нужен USMT 5.0 (build 6.2.9200.16384), качаем [ADK](http://www.microsoft.com/en-us/download/details.aspx?id=30652) и ставим на какую-то машину только USMT (лучше не на машину с уже установленным USMT 6.3) и &#8220;выдираем&#8221; из неё файлы USMT (папка по умолчанию C:Program Files (x86)Windows Kits8.0Assessment and Deployment KitUser State Migration Tool)
+USMT 6.3 создается при установке SCCM, нам нужен USMT 5.0 (build 6.2.9200.16384), качаем [ADK](http://www.microsoft.com/en-us/download/details.aspx?id=30652) и ставим на какую-то машину только USMT (лучше не на машину с уже установленным USMT 6.3) и "выдираем"; из неё файлы USMT (папка по умолчанию C:Program Files (x86)Windows Kits8.0Assessment and Deployment KitUser State Migration Tool)
   
 После чего копируем их на сервер и создаем пакет в который входят скопированные файлы, программу создавать не нужно.
 
 3. Создание MDT Boot Image
   
-Открываем консоль, далее топаем в Software Library > Operating Systems > Boot Images. &#8220;Create Boot Image using MDT&#8221;, вводим имя, описание, путь до места хранения пакета, после чего выбираем битность и размер &#8220;Scratch Space&#8221;, рекомендуется выбрать размер не менее 128мб. Необходимо создать и x86 и x64 образы. После создания необходимо зайти в свойства созданных образов и поставить галочку &#8220;Deploy this boot image from the PXE-enabled distribution point&#8221;
+Открываем консоль, далее топаем в Software Library > Operating Systems > Boot Images. "Create Boot Image using MDT";, вводим имя, описание, путь до места хранения пакета, после чего выбираем битность и размер "Scratch Space";, рекомендуется выбрать размер не менее 128мб. Необходимо создать и x86 и x64 образы. После создания необходимо зайти в свойства созданных образов и поставить галочку "Deploy this boot image from the PXE-enabled distribution point";
 
-**Создание необходимых Task Sequence&#8217;ов**
+**Создание необходимых Task Sequence'ов**
   
 1. Создание TS для миграции данных с Windows XP.
   
@@ -76,19 +76,19 @@ USMT 6.3 создается при установке SCCM, нам нужен US
 
 3. Модификация TS
   
-Необходимо модифицировать наш TS чтобы он [работал](http://www.deploymentresearch.com/Research/tabid/62/EntryId/80/Fixing-the-Computer-Replace-uberbug-in-MDT-2012-Update-1-With-ConfigMgr.aspx). Открываем консоль, далее топаем в Software Library > Operating Systems > Task Sequence. Выбираем наш TS и нажимаем &#8220;Edit&#8221;. Находим шаг &#8220;Set Status 5&#8221; и добавляем после него шаг &#8220;Request State Store&#8221; и выбираем &#8220;Restore State from another computer&#8221;
+Необходимо модифицировать наш TS чтобы он [работал](http://www.deploymentresearch.com/Research/tabid/62/EntryId/80/Fixing-the-Computer-Replace-uberbug-in-MDT-2012-Update-1-With-ConfigMgr.aspx). Открываем консоль, далее топаем в Software Library > Operating Systems > Task Sequence. Выбираем наш TS и нажимаем "Edit";. Находим шаг "Set Status 5"; и добавляем после него шаг "Request State Store"; и выбираем "Restore State from another computer";
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/e837859f6cfe7778b7de2532e9c1b4d9.jpg" rel="attachment wp-att-4777"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/e837859f6cfe7778b7de2532e9c1b4d9-300x270.jpg" alt="e837859f6cfe7778b7de2532e9c1b4d9" width="300" height="270" /></a>
 
-В закладке &#8220;Options&#8221; добавьте условие &#8220;Task Sequence Variable&#8221; &#8220;USMTLOCAL&#8221; &#8220;Not equals&#8221; &#8220;True&#8221;<a href="http://4c74356b41.com/wp-content/uploads/2016/02/bbd7fcc592dc5391bd77dc0604f54c6e.jpg" rel="attachment wp-att-4766"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/bbd7fcc592dc5391bd77dc0604f54c6e-287x300.jpg" alt="bbd7fcc592dc5391bd77dc0604f54c6e" width="287" height="300" /></a>
+В закладке "Options"; добавьте условие "Task Sequence Variable"; "USMTLOCAL"; "Not equals"; "True";<a href="http://4c74356b41.com/wp-content/uploads/2016/02/bbd7fcc592dc5391bd77dc0604f54c6e.jpg" rel="attachment wp-att-4766"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/bbd7fcc592dc5391bd77dc0604f54c6e-287x300.jpg" alt="bbd7fcc592dc5391bd77dc0604f54c6e" width="287" height="300" /></a>
 
-Добавьте под пунктом &#8220;Restore User State&#8221; пункт &#8220;Release State Store&#8221; и добавьте для него такое же условие.
+Добавьте под пунктом "Restore User State"; пункт "Release State Store"; и добавьте для него такое же условие.
   
-Далее в пункте &#8220;Restore User State&#8221; выберите пункт &#8220;Customize how user profiles are restored&#8221; и добавить файлы MigDocs.xml и MigUser.xml
+Далее в пункте "Restore User State"; выберите пункт "Customize how user profiles are restored"; и добавить файлы MigDocs.xml и MigUser.xml
   
 <a href="http://4c74356b41.com/wp-content/uploads/2016/02/304807fc5d1fe123ccc3e03360a30ae1.jpg" rel="attachment wp-att-4762"><img src="http://4c74356b41.com/wp-content/uploads/2016/02/304807fc5d1fe123ccc3e03360a30ae1-300x271.jpg" alt="304807fc5d1fe123ccc3e03360a30ae1" width="300" height="271" /></a>
 
-В пункте &#8220;Set Variable for Drive Letter&#8221; в группе &#8220;Install&#8221; измените значение на &#8220;True&#8221;
+В пункте "Set Variable for Drive Letter"; в группе "Install"; измените значение на "True";
 
 4. Модификация CustomSettings.ini
   
@@ -109,13 +109,13 @@ LoadStateArgs=/v:5 /c
   
 Данный шаг необходим для успешности миграции, необходимо связать компьютеры для успешной миграции между разными компьютерами.
 
-Открываем консоль, далее топаем в Assets And Compliance > User State Migration. Выбираем пункт &#8220;Create Computer Association&#8221; и выбираем исходный компьютер (Windows XP) и целевой (Windows 8.1). Если целевого компьютера еще нет его необходимо создать в SCCM.
+Открываем консоль, далее топаем в Assets And Compliance > User State Migration. Выбираем пункт "Create Computer Association"; и выбираем исходный компьютер (Windows XP) и целевой (Windows 8.1). Если целевого компьютера еще нет его необходимо создать в SCCM.
 
 В случае если Вам необходимо реализовать сценарий «Refresh», а не «Replace» Вам не нужно связывать компьютеры. Вы просто запускаете сбор данных, после чего перегружаете машину в PXE и запускаете установку Windows 8.1.
 
 Далее следуют пункты 5 и 6.
   
-Естественно, для грамотной миграции Вам необходимо правильно создать коллекции на которые Вы &#8220;натравите&#8221; данные TS&#8217;ы.
+Естественно, для грамотной миграции Вам необходимо правильно создать коллекции на которые Вы "натравите"; данные TS'ы.
   
 Коллекция со всеми Windows XP компьютерами:
 
@@ -125,8 +125,8 @@ select *  from  SMS_R_System inner join SMS_G_System_OPERATING_SYSTEM on SMS_G_S
 
 Коллекцию для Windows 8.1 компьютеров так же будет необходимо создать.
 
-Таким образом можно мигрировать как настройки со старого компьютера на новый так и в &#8220;пределах&#8221; одной машины.
+Таким образом можно мигрировать как настройки со старого компьютера на новый так и в "пределах"; одной машины.
   
-Из плюсов - копия файлов пользователя на сервере лежит столько сколько нужно, единый сценарий для &#8220;Refresh&#8221; (этот сценарий лучше реализовывать целиком через WinPE, но для этого необходим отдельный TS) и &#8220;Replace&#8221; сценариев.
+Из плюсов - копия файлов пользователя на сервере лежит столько сколько нужно, единый сценарий для "Refresh"; (этот сценарий лучше реализовывать целиком через WinPE, но для этого необходим отдельный TS) и "Replace"; сценариев.
   
 Из минусов - 2 TS, один делается не в WinPE потому пользователь может как-то на него повлиять, необходимо много места на State Migration Point для хранения информации пользователей.

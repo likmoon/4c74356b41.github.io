@@ -17,7 +17,7 @@ In the jenkins folder you would want jenkins.war, jre and git (well, i figured j
   
 For COPY command to work you would have to invoke docker build from the directory containing jenkins directory.
 
-To build I&#8217;m using: 
+To build I'm using: 
 
 ```
 docker build -t win/jenkins
@@ -38,4 +38,4 @@ So to run that, I use:
 docker run -p 8080:8080 -e PATH="%PATH%;c:/jenkins/bin;c:/jenkins/git/bin" win/jenkins powershell set-dnsclientserveraddress -InterfaceIndex (get-netadapter).ifindex -serveraddresses 8.8.8.8; git config --global http.sslVerify false; java -jar c:\jenkins\jenkins.war
 ```
 
-So I&#8217;m aware there&#8217;s the ENV directive in the dockerfile, but it won&#8217;t work for me with windows containers, for some reason. Or you could specify full path to java executable in the CMD directive of the dockerfile and you would also have to specify full path to git inside Jenkins in that case. Also, there&#8217;s a hack to skip certificate verification. So probably not suitable for production use 😉
+So I'm aware there's the ENV directive in the dockerfile, but it won't work for me with windows containers, for some reason. Or you could specify full path to java executable in the CMD directive of the dockerfile and you would also have to specify full path to git inside Jenkins in that case. Also, there's a hack to skip certificate verification. So probably not suitable for production use 😉

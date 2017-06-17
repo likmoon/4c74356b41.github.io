@@ -12,7 +12,7 @@ tags:
   - DSC
   - PowerShell
 ---
-Ok, so I&#8217;ve put together a DSC Configuration to setup basic .NET core app on IIS.
+Ok, so I've put together a DSC Configuration to setup basic .NET core app on IIS.
 
 ```
 Configuration Payload

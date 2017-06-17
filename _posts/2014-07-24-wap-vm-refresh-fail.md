@@ -1,6 +1,6 @@
 ---
 id: 1408
-title: '&#8220;An error occurred while retrieving the list of Virtual Machine Roles&#8221; ошибка в Windows Azure Pack'
+title: '"An error occurred while retrieving the list of Virtual Machine Roles"; ошибка в Windows Azure Pack'
 date: 2014-07-24T22:41:52+00:00
 author: rootilo
 layout: post
